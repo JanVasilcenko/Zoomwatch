@@ -56,14 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Zombie.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Object.shader" />
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Global.shader" />
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
+    <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
+    <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Object.shader" />
+    <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Global.shader" />
+    <None Include="Assets\Graphics\PolygonZombies\Shaders\POLYGON_Zombies.shader" />
+    <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
