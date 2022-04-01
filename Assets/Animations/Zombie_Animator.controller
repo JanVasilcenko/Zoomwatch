@@ -86,7 +86,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zombie_Idle_1_v2
+  m_Name: Zombie_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -122,7 +122,7 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4949963335292063257}
-    m_Position: {x: 1160, y: 160, z: 0}
+    m_Position: {x: 1150, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7989051935865899311}
     m_Position: {x: 580, y: 170, z: 0}
@@ -171,7 +171,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zombie_Atk_Arms_3_SHORT_Loop
+  m_Name: Zombie_Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
