@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637841423919311716
+      ticks: 637842633189106809
     m_Hash: 2485998105
   m_LockFileStatus:
     m_FilePath: C:/UnityGame/Zoomwatch/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637841423919311716
+      ticks: 637842633189116812
     m_Hash: 711915629
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -311,6 +311,7 @@ m_PackageAssets:
         - 2.0.11
         - 2.0.12
         - 2.0.14
+        - 2.0.15
         compatible:
         - 1.0.2
         - 1.0.3
@@ -329,7 +330,8 @@ m_PackageAssets:
         - 2.0.11
         - 2.0.12
         - 2.0.14
-        verified: 2.0.14
+        - 2.0.15
+        verified: 2.0.15
       dependencies:
       - name: com.unity.test-framework
         version: 1.1.9
@@ -2893,6 +2895,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.4
         - 1.2.5
+        - 1.2.6
         compatible:
         - 0.0.12-preview.2
         - 0.0.12-preview.5
@@ -2910,7 +2913,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.4
         - 1.2.5
-        verified: 1.2.5
+        - 1.2.6
+        verified: 1.2.6
       dependencies: []
       resolvedDependencies: []
       keywords:
