@@ -91,6 +91,7 @@ public class Zombie : MonoBehaviour {
 
     private void Wander() {
         decreaseSpeedIfFastZombie();
+      
 
         if (!isWalkPointSet) {
             animator.SetBool("Walking", false);
@@ -103,6 +104,7 @@ public class Zombie : MonoBehaviour {
 
         if (isWalkPointSet) {
             animator.SetBool("Walking", true);
+            
             animator.SetBool("Chase", false);
             navMeshAgent.SetDestination(currentWalkPoint);
         }
@@ -130,6 +132,8 @@ public class Zombie : MonoBehaviour {
         animator.SetBool("Chase", true);
         animator.SetBool("Walking", false);
         navMeshAgent.SetDestination(currentTarget.transform.position);
+        
+
     }
 
     private void AttackTarget() {
@@ -140,8 +144,10 @@ public class Zombie : MonoBehaviour {
         Quaternion quaternation = Quaternion.LookRotation((currentTarget.transform.position - transform.position).normalized);
         Quaternion rotateTo = new Quaternion(transform.rotation.x, quaternation.y, transform.rotation.z, quaternation.w);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotationMultiplier);
-
+        
+        
         if (attackCycle == null) {
+
             disableMovementIfFastZombie();
             attackCycle = AttackLogic();
             StartCoroutine(attackCycle);
