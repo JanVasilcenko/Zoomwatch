@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")] 
     private float moveSpeed;
+    public float acceleration;
     public float walkSpeed;
     public float sprintSpeed;
 
@@ -103,7 +104,14 @@ public class PlayerMovement : MonoBehaviour
         if (grounded && Input.GetKey(sprintKey))
         {
             movementState = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            //moveSpeed = sprintSpeed;
+            moveSpeed += acceleration;
+            Debug.Log(moveSpeed);
+
+            if (moveSpeed > sprintSpeed)
+            {
+                moveSpeed = sprintSpeed;
+            }
         }
         
         //Mode - Walking
@@ -132,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (rb.velocity.y > 0)
             {
-                rb.AddForce(Vector3.down * 100f, ForceMode.Force);
+                rb.AddForce(Vector3.down * 80f, ForceMode.Force);
             }
         }
         
