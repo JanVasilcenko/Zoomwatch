@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Sound\Sound.cs" />
      <Compile Include="Assets\Scripts\AI\Zombies\Slow_Zombie.cs" />
+     <Compile Include="Assets\Scripts\Player\Camera\HeadBob.cs" />
      <Compile Include="Assets\Scripts\Player\Camera\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\AI\Agent.cs" />
@@ -62,7 +63,6 @@
      <Compile Include="Assets\Scripts\Sound\AudioManager.cs" />
      <Compile Include="Assets\Scripts\AI\Zombies\Zombie.cs" />
      <Compile Include="Assets\Scripts\Player\Camera\MoveCamera.cs" />
-     <Compile Include="Assets\Scripts\Player\Camera\HeadBob.cs" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Object.shader" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Global.shader" />
