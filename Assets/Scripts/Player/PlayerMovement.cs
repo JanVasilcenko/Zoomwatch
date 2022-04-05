@@ -75,6 +75,8 @@ public class PlayerMovement : MonoBehaviour {
         SpeedControl();
         StateHandler();
 
+        Debug.Log(moveSpeed);
+        
         //handle drag
         if (grounded)
             rb.drag = groundDrag;
@@ -122,8 +124,7 @@ public class PlayerMovement : MonoBehaviour {
         if (grounded && Input.GetKey(sprintKey)) {
             movementState = MovementState.sprinting;
             //moveSpeed = sprintSpeed;
-            moveSpeed += acceleration;
-            Debug.Log(moveSpeed);
+            moveSpeed += acceleration * Time.deltaTime;
 
             if (moveSpeed > sprintSpeed) {
                 moveSpeed = sprintSpeed;
