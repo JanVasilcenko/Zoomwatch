@@ -102,26 +102,26 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         //start crouch
-        if (Input.GetKeyDown(crouchKey)) {
+        if (Input.GetButtonDown("Crouch")) {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
 
         //stop crouch
-        if (Input.GetKeyUp(crouchKey)) {
+        if (Input.GetButtonUp("Crouch")) {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
     }
 
     private void StateHandler() {
         //Mode - Crouching
-        if (Input.GetKey(crouchKey)) {
+        if (Input.GetButton("Crouch")) {
             movementState = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
 
         //Mode - Sprinting
-        if (grounded && Input.GetKey(sprintKey)) {
+        if (grounded && Input.GetButton("Sprint")) {
             movementState = MovementState.sprinting;
             //moveSpeed = sprintSpeed;
             moveSpeed += acceleration * Time.deltaTime;
