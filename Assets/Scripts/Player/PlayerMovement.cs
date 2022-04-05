@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour {
         verticalInput = Input.GetAxisRaw("Vertical");
 
         //when to jump
-        if (Input.GetKey(jumpKey) && readyToJump && grounded) {
+        if (Input.GetButton("Jump") && readyToJump && grounded) {
             readyToJump = false;
 
             Jump();
