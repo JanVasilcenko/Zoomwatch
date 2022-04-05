@@ -1,27 +1,23 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
-public class AudioManager : MonoBehaviour
-{
+public class AudioManager : MonoBehaviour {
 
-    public Sound[] sounds;
+    public Sound [] sounds;
 
     public static AudioManager instance;
     // Start is called before the first frame update
-    void Awake()
-    {
+    void Awake() {
 
         if (instance == null)
             instance = this;
-        else
-        {
+        else {
             Destroy(gameObject);
             return;
         }
-        
+
         DontDestroyOnLoad(gameObject);
-        foreach (Sound sound in sounds)
-        {
+        foreach (Sound sound in sounds) {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
             sound.source.volume = sound.volume;
@@ -30,20 +26,16 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name)
-    {
+    public void Play(string name) {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
+        if (s == null) {
             return;
         }
         s.source.Play();
     }
-    public void Stop(string name)
-    {
+    public void Stop(string name) {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
+        if (s == null) {
             return;
         }
         s.source.Stop();
