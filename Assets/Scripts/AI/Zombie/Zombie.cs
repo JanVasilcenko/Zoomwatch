@@ -47,6 +47,11 @@ public abstract class Zombie : Agent {
         if (distance.sqrMagnitude < 1) {
             isWalkPointSet = false;
         }
+
+        if (!SFXManager.instance.audioSource.isPlaying)
+        {
+            SFXManager.instance.audioSource.PlayOneShot(SFXManager.instance.wander);
+        }
     }
 
     private IEnumerator SearchForRandomWalkPoint() {
@@ -64,6 +69,11 @@ public abstract class Zombie : Agent {
         animator.SetBool("Chase", true);
         animator.SetBool("Walking", false);
         navMeshAgent.SetDestination(currentTarget.transform.position);
+        
+        if (!SFXManager.instance.audioSource.isPlaying)
+        {
+            SFXManager.instance.audioSource.PlayOneShot(SFXManager.instance.chase);
+        }
     }
 
     public virtual void AttackTarget() {
@@ -74,6 +84,10 @@ public abstract class Zombie : Agent {
         Quaternion quaternation = Quaternion.LookRotation((currentTarget.transform.position - transform.position).normalized);
         Quaternion rotateTo = new Quaternion(transform.rotation.x, quaternation.y, transform.rotation.z, quaternation.w);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotationMultiplier);
+        if (!SFXManager.instance.audioSource.isPlaying)
+        {
+            SFXManager.instance.audioSource.PlayOneShot(SFXManager.instance.attack);
+        }
     }
 
     public bool isCloseToAttackTarget() {
