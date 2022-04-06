@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Scripts", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.PolyverseSkies.Scripts", "Boxophobic.PolyverseSkies.Scripts.csproj", "{819ce4cd-135f-a132-beab-c44d89dc3b2c}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{a7eb22c8-0d58-4792-b464-099b910e129b}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Editor", "Boxophobic.Utils.Editor.csproj", "{1c080f3b-e510-c1d6-6e32-d60e3cceb4f4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.PolyverseSkies.Editor", "Boxophobic.PolyverseSkies.Editor.csproj", "{49d9b2dc-0bfa-b264-d8d5-0a6d227df5b5}"
@@ -35,6 +37,10 @@ Global
 		{819ce4cd-135f-a132-beab-c44d89dc3b2c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{819ce4cd-135f-a132-beab-c44d89dc3b2c}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{819ce4cd-135f-a132-beab-c44d89dc3b2c}.Release|Any CPU.Build.0 = Release|Any CPU
+		{a7eb22c8-0d58-4792-b464-099b910e129b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{a7eb22c8-0d58-4792-b464-099b910e129b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{a7eb22c8-0d58-4792-b464-099b910e129b}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{a7eb22c8-0d58-4792-b464-099b910e129b}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1c080f3b-e510-c1d6-6e32-d60e3cceb4f4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1c080f3b-e510-c1d6-6e32-d60e3cceb4f4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1c080f3b-e510-c1d6-6e32-d60e3cceb4f4}.Release|Any CPU.ActiveCfg = Release|Any CPU
