@@ -18,11 +18,6 @@ public class Human : Agent {
 
     protected Transform currentTarget;
 
-    private Vector3 currentWalkPoint;
-    private bool isWalkPointSet;
-
-    private IEnumerator searchWalkPointCycle;
-
     public virtual void AttackTarget() {
         navMeshAgent.isStopped = true;
         animator.SetBool("Chase", false);
