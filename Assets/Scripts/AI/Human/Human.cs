@@ -9,6 +9,12 @@ public class Human : Agent {
     [SerializeField]
     [Tooltip("This field sets the max delay where zombie stands, before wandering")]
     private float maxDelayWhenSearchingForNewWaypoint;
+    [SerializeField]
+    [Tooltip("Speed of an bullet")]
+    protected float bulletSpeed = 400f;
+    [SerializeField]
+    [Tooltip("By how much will the zombie rotate when attacking the target")]
+    private float rotationMultiplier = 8000f;
 
     protected Transform currentTarget;
 
@@ -23,7 +29,7 @@ public class Human : Agent {
 
         Quaternion quaternation = Quaternion.LookRotation((currentTarget.transform.position - transform.position).normalized);
         Quaternion rotateTo = new Quaternion(transform.rotation.x, quaternation.y, transform.rotation.z, quaternation.w);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * 8000f);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateTo, Time.deltaTime * rotationMultiplier);
     }
 
     protected virtual void OnTriggerEnter(Collider other) {

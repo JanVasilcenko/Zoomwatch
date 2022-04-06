@@ -39,7 +39,7 @@ public class Scavenger_Pistol : Human {
     public void SpawnGunEffect() {
         Instantiate(gunEffect, firePoint.transform.position, Quaternion.identity);
         GameObject newbullet = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-        Vector3 accuracy = (firePoint.transform.forward * 400f) + IsAccurate();
+        Vector3 accuracy = (firePoint.transform.forward * bulletSpeed) + IsAccurate();
         newbullet.GetComponent<Rigidbody>().velocity = accuracy;
     }
 
