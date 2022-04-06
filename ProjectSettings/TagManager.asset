@@ -6,6 +6,20 @@ TagManager:
   tags:
   - Scavenger
   - Zombie
+  - weaponGrenade
+  - weaponKalashnikov
+  - weaponRifle
+  - weaponUzi
+  - collectibleAmmoLarge
+  - collectibleAmmoSmall
+  - collectibleMedicLarge
+  - collectibleMedicSmall
+  - weaponCrowbar
+  - weaponKnife
+  - weaponMachete
+  - collectibleSmallMoney
+  - collectibleMediumMoney
+  - collectibleLargeMoney
   layers:
   - Default
   - TransparentFX
