@@ -305,6 +305,9 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
  </Reference>
@@ -721,6 +724,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{a7eb22c8-0d58-4792-b464-099b910e129b}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
       <Project>{1c080f3b-e510-c1d6-6e32-d60e3cceb4f4}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
