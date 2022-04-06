@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour {
     public float acceleration;
     public float walkSpeed;
     public float sprintSpeed;
+    public float wallrunSpeed;
+    public bool wallrunning;
     public float slideSpeed;
     public bool sliding;
 
@@ -57,6 +59,7 @@ public class PlayerMovement : MonoBehaviour {
     public enum MovementState {
         walking,
         sprinting,
+        wallrunning,
         crouching,
         sliding,
         air
@@ -135,6 +138,13 @@ public class PlayerMovement : MonoBehaviour {
         //         desiredMoveSpeed = sprintSpeed;
         //     }
         // }
+        
+        //Mode - Wallrunning
+        if (wallrunning)
+        {
+            movementState = MovementState.wallrunning;
+            moveSpeed = wallrunSpeed;
+        }
         
         //Mode - Crouching
         if (Input.GetButton("Crouch") && grounded) {

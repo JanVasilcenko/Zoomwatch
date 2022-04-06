@@ -28,4 +28,14 @@ public class PlayerCamera : MonoBehaviour {
         transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
         orientation.rotation = Quaternion.Euler(0, rotationY, 0);
     }
+
+    public void DoFov(float endValue)
+    {
+        
+    }
+
+    public void DoTilt(float zTilt)
+    {
+        
+    }
 }
