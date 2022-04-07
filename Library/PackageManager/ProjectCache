@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637849388756034612
-    m_Hash: 2947972808
+      ticks: 637849439103315252
+    m_Hash: 60779265
   m_LockFileStatus:
     m_FilePath: C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637849388756064616
-    m_Hash: 1486200146
+      ticks: 637849439103315252
+    m_Hash: 3851690104
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
