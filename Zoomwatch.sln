@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Editor", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.PolyverseSkies.Editor", "Boxophobic.PolyverseSkies.Editor.csproj", "{49d9b2dc-0bfa-b264-d8d5-0a6d227df5b5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{2e33b596-def1-5280-e03c-7b0200b2dc5c}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{49d9b2dc-0bfa-b264-d8d5-0a6d227df5b5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49d9b2dc-0bfa-b264-d8d5-0a6d227df5b5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49d9b2dc-0bfa-b264-d8d5-0a6d227df5b5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2e33b596-def1-5280-e03c-7b0200b2dc5c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2e33b596-def1-5280-e03c-7b0200b2dc5c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2e33b596-def1-5280-e03c-7b0200b2dc5c}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2e33b596-def1-5280-e03c-7b0200b2dc5c}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
