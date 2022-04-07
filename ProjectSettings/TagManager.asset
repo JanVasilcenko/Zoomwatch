@@ -20,6 +20,13 @@ TagManager:
   - collectibleSmallMoney
   - collectibleMediumMoney
   - collectibleLargeMoney
+  - weaponShotgun
+  - equipWeaponGrenade
+  - equipWeaponKalashnikov
+  - equipWeaponRifle
+  - equipWeaponShotgun
+  - equipWeaponUzi
+  - equipWeaponPistol
   layers:
   - Default
   - TransparentFX
