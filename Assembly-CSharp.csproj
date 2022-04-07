@@ -72,6 +72,8 @@
      <Compile Include="Assets\Scripts\Player\Movement\WallRunning.cs" />
      <Compile Include="Assets\Scripts\AI\Zombie\Fast_Zombie.cs" />
      <Compile Include="Assets\Scripts\AI\Zombie\Slow_Zombie.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement\GrapplingGun.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement\RotateGun.cs" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Object.shader" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Global.shader" />
@@ -302,11 +304,11 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
  <Reference Include="DOTween">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
