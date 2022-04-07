@@ -7,9 +7,6 @@ TagManager:
   - Scavenger
   - Zombie
   - weaponGrenade
-  - weaponKalashnikov
-  - weaponRifle
-  - weaponUzi
   - collectibleAmmoLarge
   - collectibleAmmoSmall
   - collectibleMedicLarge
@@ -20,13 +17,8 @@ TagManager:
   - collectibleSmallMoney
   - collectibleMediumMoney
   - collectibleLargeMoney
-  - weaponShotgun
-  - equipWeaponGrenade
-  - equipWeaponKalashnikov
-  - equipWeaponRifle
-  - equipWeaponShotgun
-  - equipWeaponUzi
-  - equipWeaponPistol
+  - weapon
+  - pistol
   layers:
   - Default
   - TransparentFX

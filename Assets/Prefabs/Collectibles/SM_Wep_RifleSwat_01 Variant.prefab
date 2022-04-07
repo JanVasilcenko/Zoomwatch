@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 199910, guid: 8be86b86610077a47be3a9a99fc8f89e, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_RifleSwat_01
+      value: SM_Wep_RifleSwat_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 199910, guid: 8be86b86610077a47be3a9a99fc8f89e, type: 3}
       propertyPath: m_TagString
-      value: weaponRifle
+      value: weapon
       objectReference: {fileID: 0}
     - target: {fileID: 410062, guid: 8be86b86610077a47be3a9a99fc8f89e, type: 3}
       propertyPath: m_RootOrder
