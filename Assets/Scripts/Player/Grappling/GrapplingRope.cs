@@ -41,7 +41,6 @@ public class GrapplingRope : MonoBehaviour
             spring.SetVelocity(velocity);
             lr.positionCount = quality + 1;
         }
-        
         spring.SetDamper(damper);
         spring.SetStrength(strength);
         spring.Update(Time.deltaTime);

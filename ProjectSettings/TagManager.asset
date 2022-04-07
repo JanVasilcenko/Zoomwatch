@@ -20,6 +20,9 @@ TagManager:
   - collectibleSmallMoney
   - collectibleMediumMoney
   - collectibleLargeMoney
+  - PlayerBullet
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -30,9 +33,9 @@ TagManager:
   - whatIsGround
   - whatIsWall
   - whatIsGrapplePull
-  - 
-  - 
-  - 
+  - whatIsEnemies
+  - whatIsBullet
+  - whatIsPlayer
   - 
   - 
   - 
