@@ -306,6 +306,9 @@
  <Reference Include="DOTweenEditor">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+ </Reference>
  <Reference Include="log4netPlastic">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
@@ -317,9 +320,6 @@
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Burst.Unsafe">
- <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
