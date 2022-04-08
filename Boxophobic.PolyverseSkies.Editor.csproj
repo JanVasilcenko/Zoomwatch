@@ -321,6 +321,9 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Uni/Semester6/GMD/ZoomWatchNew/Zoomwatch/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
