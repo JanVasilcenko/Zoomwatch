@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 moveDirection;
 
     private Rigidbody rb;
+    public PlayerCamera camera;
 
     public MovementState movementState;
 
@@ -83,8 +84,6 @@ public class PlayerMovement : MonoBehaviour {
         MyInput();
         SpeedControl();
         StateHandler();
-
-        Debug.Log(moveSpeed);
         
         //handle drag
         if (grounded)
@@ -150,6 +149,8 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButton("Crouch") && grounded) {
             movementState = MovementState.crouching;
             moveSpeed = crouchSpeed;
+            //reset camera effects
+            //camera.DoFov(60f);
         }
 
         //Mode - Sprinting
@@ -161,17 +162,23 @@ public class PlayerMovement : MonoBehaviour {
             if (moveSpeed > sprintSpeed) {
                 moveSpeed = sprintSpeed;
             }
+            //camera effect for SPEEEEEDDD
+            //camera.DoFov(80f);
         }
 
         //Mode - Walking
         else if (grounded) {
             movementState = MovementState.walking;
             moveSpeed = walkSpeed;
+            //reset camera effects
+            //camera.DoFov(60f);
         }
 
         //Mode - air
         else {
             movementState = MovementState.air;
+            //reset camera effects
+            //camera.DoFov(60f);
         }
         
         //check if desiredMoveSpeed has changed drastically

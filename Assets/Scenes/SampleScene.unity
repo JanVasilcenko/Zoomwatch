@@ -1579,6 +1579,7 @@ MonoBehaviour:
   grounded: 0
   maxSlopeAngle: 20
   orientation: {fileID: 147146620}
+  camera: {fileID: 1555126661}
   movementState: 0
 --- !u!114 &665320101
 MonoBehaviour:
@@ -2902,6 +2903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4680e3db45e01a846b6c8e03a2bd6683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pm: {fileID: 665320100}
 --- !u!114 &1497971867
 MonoBehaviour:
   m_ObjectHideFlags: 0

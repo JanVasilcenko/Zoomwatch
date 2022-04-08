@@ -38,7 +38,7 @@ public class Gun : MonoBehaviour
     {
         //make sure magazine is full
         bulletsLeft = magazineSize;
-        readyToShoot = true;
+        readyToShoot = true; 
     }
 
     private void Update()

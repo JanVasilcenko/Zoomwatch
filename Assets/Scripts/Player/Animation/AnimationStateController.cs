@@ -1,25 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class AnimationStateController : MonoBehaviour
 {
     private Animator animator;
-    private Rigidbody rb;
-    private PlayerMovement pm;
+    public PlayerMovement pm;
+   //public TwoBoneIKConstraint twoBoneIKConstraint;
     
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PlayerMovement>();
+        //twoBoneIKConstraint.data.target = 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Sprint") /*&& pm.grounded*/)
+        if (Input.GetButton("Sprint") && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0) && pm.grounded)
         {
             animator.SetBool("isSprinting", true);
             animator.SetBool("isIdle", false);
@@ -54,5 +54,10 @@ public class AnimationStateController : MonoBehaviour
         //     animator.SetBool("isIdle", true);
         //     animator.SetBool("isSprinting", false);
         // }
+    }
+
+    public void SwitchWeapon()
+    {
+        Debug.Log("I Switched weapon");
     }
 }
