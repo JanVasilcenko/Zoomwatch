@@ -31,6 +31,18 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool("isSprinting", false);
         }
         
+        if (Input.GetButton("Shoot") || (Input.GetAxis("Shoot") != 0) || Input.GetButtonDown("Shoot") || (Input.GetAxis("Shoot") != 0))
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isSprinting", false);
+        }
+        
+        if (Input.GetButton("Grapple"))
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isSprinting", false);
+        }
+        
         // if (Input.GetButton("Jump"))
         // {
         //     animator.SetBool("isIdle", true);
