@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\AI\Zombie\Fast_Zombie.cs" />
      <Compile Include="Assets\Scripts\AI\Zombie\Slow_Zombie.cs" />
      <Compile Include="Assets\Scripts\Player\Grappling\GrapplingRope.cs" />
+     <Compile Include="Assets\Scripts\Player\Animation\AnimationStateController.cs" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Object.shader" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Global.shader" />
