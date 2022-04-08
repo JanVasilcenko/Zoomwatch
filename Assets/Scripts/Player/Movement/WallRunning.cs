@@ -135,9 +135,9 @@ public class WallRunning : MonoBehaviour
         //apply camera effects
         camera.DoFov(90f);
         if(wallLeft)
-            camera.DoTilt(-5f);
+            camera.DoTilt(-10f);
         if(wallRight)
-            camera.DoTilt(5f);
+            camera.DoTilt(10f);
     }
     
     private void WallRunningMovement()
