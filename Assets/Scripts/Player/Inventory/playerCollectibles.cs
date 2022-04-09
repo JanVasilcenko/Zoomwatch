@@ -10,12 +10,12 @@ public class playerCollectibles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentMelee = "knife";
-        currentGun = "uzi";
+        // currentMelee = "knife";
+        // currentGun = "uzi";
         currentHealth = 100;
         currentAmmo = 10;
         currentMoney = 0;
-        hasGrenade = false;
+        // hasGrenade = false;
     }
 
     // Update is called once per frame
@@ -24,15 +24,15 @@ public class playerCollectibles : MonoBehaviour
         
     }
 
-    private void setGun(string gun)
-    {
-        currentGun = gun;
-    }
+    // private void setGun(string gun)
+    // {
+    //     currentGun = gun;
+    // }
 
-    private void setMelee(string melee)
-    {
-        currentMelee = melee;
-    }
+    // private void setMelee(string melee)
+    // {
+    //     currentMelee = melee;
+    // }
 
     private void addAmmo(int ammoAmount)
     {
@@ -53,35 +53,35 @@ public class playerCollectibles : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("weaponGrenade")){
-            other.gameObject.SetActive(false);
-            if(!hasGrenade)
-                hasGrenade = true;
-        }
-        if(other.CompareTag("weaponKalashnikov")){
-            other.gameObject.SetActive(false);
-            setGun("kalashnikov");
-        }
-        if(other.CompareTag("weaponRifle")){
-            other.gameObject.SetActive(false);
-            setGun("rifle");
-        }
-        if(other.CompareTag("weaponUzi")){
-            other.gameObject.SetActive(false);
-            setGun("uzi");
-        }
-        if(other.CompareTag("weaponCrowbar")){
-            other.gameObject.SetActive(false);
-            setMelee("crowbar");
-        }
-        if(other.CompareTag("weaponKnife")){
-            other.gameObject.SetActive(false);
-            setMelee("knife");
-        }
-        if(other.CompareTag("weaponMachete")){
-            other.gameObject.SetActive(false);
-            setMelee("machette");
-        }
+        // if(other.CompareTag("weaponGrenade")){
+        //     other.gameObject.SetActive(false);
+        //     if(!hasGrenade)
+        //         hasGrenade = true;
+        // }
+        // if(other.CompareTag("weaponKalashnikov")){
+        //     other.gameObject.SetActive(false);
+        //     setGun("kalashnikov");
+        // }
+        // if(other.CompareTag("weaponRifle")){
+        //     other.gameObject.SetActive(false);
+        //     setGun("rifle");
+        // }
+        // if(other.CompareTag("weaponUzi")){
+        //     other.gameObject.SetActive(false);
+        //     setGun("uzi");
+        // }
+        // if(other.CompareTag("weaponCrowbar")){
+        //     other.gameObject.SetActive(false);
+        //     setMelee("crowbar");
+        // }
+        // if(other.CompareTag("weaponKnife")){
+        //     other.gameObject.SetActive(false);
+        //     setMelee("knife");
+        // }
+        // if(other.CompareTag("weaponMachete")){
+        //     other.gameObject.SetActive(false);
+        //     setMelee("machette");
+        // }
         if(other.CompareTag("collectibleAmmoSmall")){
             other.gameObject.SetActive(false);
             addAmmo(50);

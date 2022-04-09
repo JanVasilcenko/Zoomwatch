@@ -23,6 +23,8 @@ TagManager:
   - PlayerBullet
   - Enemy
   - Bullet
+  - weapon
+  - pistol
   layers:
   - Default
   - TransparentFX
