@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Grenade_Base_01
+      value: GrenadeAmmo
       objectReference: {fileID: 0}
     - target: {fileID: 482352, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_RootOrder
@@ -62,31 +62,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
   m_PrefabInstance: {fileID: 4422748544968143626}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &880922371991945594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4422748544967989846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1546296fecaea346a7adaefbc683664, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6525466540266544774}
-  explosion: {fileID: 1829163952570794, guid: f171ac3dbb620c44e81cd88ddee1cbbd, type: 3}
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 512
-  bounciness: 0.5
-  useGravity: 1
-  explosionDamage: 100
-  explosionRange: 5
-  explosionForce: 1200
-  maxCollisions: 5
-  maxLifetime: 3
-  explodeOnTouch: 1
 --- !u!54 &6525466540266544774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -201,3 +176,41 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &880922371991945594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422748544967989846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1546296fecaea346a7adaefbc683664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6525466540266544774}
+  explosion: {fileID: 1829163952570794, guid: f171ac3dbb620c44e81cd88ddee1cbbd, type: 3}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 512
+  bounciness: 0.5
+  useGravity: 1
+  explosionDamage: 100
+  explosionRange: 5
+  explosionForce: 1200
+  maxCollisions: 5
+  maxLifetime: 3
+  explodeOnTouch: 1
+--- !u!135 &4785714603980920515
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422748544967989846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07909414
+  m_Center: {x: 0, y: 0.019037565, z: -0.0021595396}
