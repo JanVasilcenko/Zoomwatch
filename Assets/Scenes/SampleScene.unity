@@ -1632,6 +1632,7 @@ MonoBehaviour:
   currentHealth: 0
   currentAmmo: 0
   currentMoney: 0
+  healthSound: {fileID: 8300000, guid: 5f4b9bd4c542f4360bc5e2b2bd8da618, type: 3}
 --- !u!114 &665320102
 MonoBehaviour:
   m_ObjectHideFlags: 0
