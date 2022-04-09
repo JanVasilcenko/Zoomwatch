@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrenadeAmmo
       objectReference: {fileID: 0}
+    - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     - target: {fileID: 482352, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -78,6 +82,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!135 &4785714603980920515
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422748544967989846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07909414
+  m_Center: {x: 0, y: 0.019037565, z: -0.0021595396}
 --- !u!96 &8638425320992475160
 TrailRenderer:
   serializedVersion: 2
@@ -201,16 +218,3 @@ MonoBehaviour:
   maxCollisions: 5
   maxLifetime: 3
   explodeOnTouch: 1
---- !u!135 &4785714603980920515
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4422748544967989846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07909414
-  m_Center: {x: 0, y: 0.019037565, z: -0.0021595396}
