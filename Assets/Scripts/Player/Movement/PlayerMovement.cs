@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpCooldown;
     public float airMultiplier;
     private bool readyToJump;
+    public AudioClip jumpSound;
 
     [Header("Crouching")]
     public float crouchSpeed;
@@ -57,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public MovementState movementState;
 
-    public AudioClip jumpSound;
+ 
 
     public enum MovementState {
         walking,
@@ -267,7 +268,7 @@ public class PlayerMovement : MonoBehaviour {
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
         
-         SFXManager.instance.PlaySFX(jumpSound);
+        SFXManager.instance.PlaySFX(jumpSound);
     }
 
     private void ResetJump() {

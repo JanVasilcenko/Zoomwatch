@@ -1076,7 +1076,7 @@ AudioSource:
   m_GameObject: {fileID: 423781268}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8427507211597766789, guid: 9f886467eeeee4da2aa084a83e8069f9, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1599,6 +1599,7 @@ MonoBehaviour:
   jumpForce: 9
   jumpCooldown: 0.25
   airMultiplier: 0.2
+  jumpSound: {fileID: 8300000, guid: e741618b6ff7e401492e2f5b3bbf6225, type: 3}
   crouchSpeed: 3.5
   crouchYScale: 0.5
   jumpKey: 32
@@ -1613,7 +1614,6 @@ MonoBehaviour:
   orientation: {fileID: 147146620}
   camera: {fileID: 1555126661}
   movementState: 0
-  jumpSound: {fileID: 8300000, guid: e741618b6ff7e401492e2f5b3bbf6225, type: 3}
 --- !u!114 &665320101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2961,7 +2961,7 @@ AudioSource:
   m_GameObject: {fileID: 1495488361}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1193964218304787827, guid: 9f886467eeeee4da2aa084a83e8069f9, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
