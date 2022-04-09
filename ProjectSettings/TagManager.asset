@@ -25,6 +25,7 @@ TagManager:
   - Bullet
   - weapon
   - pistol
+  - ammoGrenade
   layers:
   - Default
   - TransparentFX
