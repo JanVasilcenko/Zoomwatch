@@ -6,11 +6,9 @@ using UnityEngine;
 public class SFXManager : MonoBehaviour
 {
 
-    public AudioSource audioSource;
+    public AudioSource musicAudioSource, sfxSource;
 
-    public AudioClip attack;
-    public AudioClip wander;
-    public AudioClip chase;
+ 
     public static SFXManager instance;
 
     private void Awake()
@@ -22,5 +20,16 @@ public class SFXManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this);
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        musicAudioSource.clip = clip;
+        musicAudioSource.Play();
     }
 }

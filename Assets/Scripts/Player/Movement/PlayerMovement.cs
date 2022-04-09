@@ -57,6 +57,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public MovementState movementState;
 
+    public AudioClip jumpSound;
+
     public enum MovementState {
         walking,
         sprinting,
@@ -264,6 +266,8 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        
+        SFXManager.instance.PlaySFX(jumpSound);
     }
 
     private void ResetJump() {
