@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192002, guid: 2c4f4c967cbf830459d53c4a848651ca, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_RifleBandit_01
+      value: SM_Wep_RifleBandit_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 192002, guid: 2c4f4c967cbf830459d53c4a848651ca, type: 3}
       propertyPath: m_TagString
