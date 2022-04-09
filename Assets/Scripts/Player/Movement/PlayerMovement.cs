@@ -267,7 +267,7 @@ public class PlayerMovement : MonoBehaviour {
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
         
-        // SFXManager.instance.PlaySFX(jumpSound);
+         SFXManager.instance.PlaySFX(jumpSound);
     }
 
     private void ResetJump() {
