@@ -24,11 +24,15 @@ public class CustomBullet : MonoBehaviour
     public float maxLifetime;
     public bool explodeOnTouch = true;
 
+    public AudioClip explosionSound;
+
     int collisions;
     PhysicMaterial physics_mat;
 
     private void Start()
     {
+        AudioSource audio = GetComponent<AudioSource>(); 
+
         Setup();
     }
 
@@ -46,7 +50,7 @@ public class CustomBullet : MonoBehaviour
     {
         //Instantiate explosion
         if (explosion != null) Instantiate(explosion, transform.position, Quaternion.identity);
-
+        
         //Check for enemies 
         Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
         for (int i = 0; i < enemies.Length; i++)
@@ -60,14 +64,23 @@ public class CustomBullet : MonoBehaviour
             if (enemies[i].GetComponent<Rigidbody>())
                 enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRange);
         }
+        AudioSource audio = GetComponent<AudioSource>();
 
+        // plays sound when collided.
+        // SFXManager.instance.PlaySFX(explosionSound);
+        audio.Play();
         //Add a little delay, just to make sure everything works fine
         Invoke("Delay", 0.05f);
+       
         //Invoke("DelayExplosion", 5f);
     }
     private void Delay()
     {
+     
+        SFXManager.instance.PlaySFX(explosionSound);
         Destroy(gameObject);
+        
+
         //Invoke("DelayExplosion", 5f);
     }
     

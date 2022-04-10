@@ -43,8 +43,12 @@ public class playerCollectibles : MonoBehaviour
 
     private void addHealth(int healthAmount)
     {
-        if(currentHealth + healthAmount < 100)
+        if (currentHealth + healthAmount < 100)
+        {
+            Debug.Log("added health");
             currentHealth += healthAmount;
+        }
+            
         else
             currentHealth = 100;
     }

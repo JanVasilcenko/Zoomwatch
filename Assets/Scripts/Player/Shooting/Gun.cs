@@ -74,6 +74,8 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
+        
+        //streialnie 
         readyToShoot = false;
 
         //Find the exact hit position using a raycast
