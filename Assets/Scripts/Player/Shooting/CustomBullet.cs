@@ -31,8 +31,7 @@ public class CustomBullet : MonoBehaviour
 
     private void Start()
     {
-        AudioSource audio = GetComponent<AudioSource>(); 
-
+        gameObject.AddComponent<AudioSource>();
         Setup();
     }
 
@@ -64,11 +63,7 @@ public class CustomBullet : MonoBehaviour
             if (enemies[i].GetComponent<Rigidbody>())
                 enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRange);
         }
-        AudioSource audio = GetComponent<AudioSource>();
-
-        // plays sound when collided.
-        // SFXManager.instance.PlaySFX(explosionSound);
-        audio.Play();
+       
         //Add a little delay, just to make sure everything works fine
         Invoke("Delay", 0.05f);
        
@@ -76,8 +71,8 @@ public class CustomBullet : MonoBehaviour
     }
     private void Delay()
     {
-     
-        SFXManager.instance.PlaySFX(explosionSound);
+        // FindObjectOfType<SFXManager>().PlaySFX("");
+        AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
         Destroy(gameObject);
         
 
