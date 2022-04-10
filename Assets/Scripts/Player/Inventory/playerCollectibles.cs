@@ -7,7 +7,7 @@ public class playerCollectibles : MonoBehaviour
     public string currentGun, currentMelee;
     public bool hasGrenade;
     public int currentHealth, currentAmmo, currentMoney;
-
+    
     public AudioClip healthSound;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,7 @@ public class playerCollectibles : MonoBehaviour
         currentHealth = 100;
         currentAmmo = 10;
         currentMoney = 0;
+        gameObject.AddComponent<AudioSource>();
         // hasGrenade = false;
     }
 
@@ -101,7 +102,7 @@ public class playerCollectibles : MonoBehaviour
             addHealth(20);
         }
         if(other.CompareTag("collectibleMedicLarge")){
-            SFXManager.instance.PlaySFX(healthSound);
+            AudioSource.PlayClipAtPoint(healthSound, gameObject.transform.position);
 
             other.gameObject.SetActive(false);
             addHealth(50);

@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour {
     // Start is called before the first frame update
     private void Start() {
         rb = GetComponent<Rigidbody>();
+       
         rb.freezeRotation = true;
 
         //to initialize jump
@@ -261,14 +262,15 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Jump() {
+        
         exitingSlope = true;
 
         //reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        
-        SFXManager.instance.PlaySFX(jumpSound);
+        AudioSource.PlayClipAtPoint(jumpSound, gameObject.transform.position);
+
     }
 
     private void ResetJump() {

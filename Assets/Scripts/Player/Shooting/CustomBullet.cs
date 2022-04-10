@@ -31,7 +31,6 @@ public class CustomBullet : MonoBehaviour
 
     private void Start()
     {
-        gameObject.AddComponent<AudioSource>();
         Setup();
     }
 
@@ -72,8 +71,9 @@ public class CustomBullet : MonoBehaviour
     private void Delay()
     {
         // FindObjectOfType<SFXManager>().PlaySFX("");
-        AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
+        AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);  
         Destroy(gameObject);
+     
         
 
         //Invoke("DelayExplosion", 5f);
