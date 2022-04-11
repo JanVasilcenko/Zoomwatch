@@ -297,6 +297,7 @@ public class MeshDestroy : MonoBehaviour
             meshDestroy.CutCascades = original.CutCascades;
             meshDestroy.ExplodeForce = original.ExplodeForce;
 
+            Destroy(GameObject, 60);
         }
 
     }

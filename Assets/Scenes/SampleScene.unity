@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.027004339, g: 0.10614024, b: 0.15926921, a: 1}
+  m_IndirectSpecularColor: {r: 0.027031632, g: 0.10617013, b: 0.15930131, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3780,9 +3780,9 @@ GameObject:
   - component: {fileID: 1962345488}
   - component: {fileID: 1962345487}
   - component: {fileID: 1962345486}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4172,7 +4172,7 @@ GameObject:
   - component: {fileID: 2101100261}
   m_Layer: 9
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
