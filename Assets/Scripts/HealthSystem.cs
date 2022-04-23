@@ -2,29 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthSystem : MonoBehaviour
-{
+public class HealthSystem : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
+    private Rigidbody rigidbody;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    private void Awake() {
+        rigidbody = GetComponent<Rigidbody>();
+    }
+
+    void Start() {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damageTaken)
-    {
+    public void TakeDamage(int damageTaken) {
         currentHealth -= damageTaken;
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
             Debug.Log("Die pls");
     }
 
-    public void Heal(int healTaken)
-    {
+    public void Heal(int healTaken) {
         currentHealth += healTaken;
-        if(currentHealth > maxHealth)
+        if (currentHealth > maxHealth)
             currentHealth = maxHealth;
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag(Tags.bullet)) {
+            rigidbody.velocity = rigidbody.velocity;
+            rigidbody.angularVelocity = rigidbody.angularVelocity;
+        }
     }
 }
