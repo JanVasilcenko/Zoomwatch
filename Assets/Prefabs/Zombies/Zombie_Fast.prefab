@@ -54,6 +54,7 @@ MonoBehaviour:
   currentState: {fileID: 7617700759616487960}
   detectionRadius: 8
   viewableAngle: 180
+  turningSpeed: 200
   navMeshAgent: {fileID: 0}
   currentTarget: {fileID: 0}
 --- !u!195 &8075871844131730343
@@ -69,7 +70,7 @@ NavMeshAgent:
   m_Speed: 0.1
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 700
   m_StoppingDistance: 1.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -231,7 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbd81fa977ad5d4a9818417d2aefc47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFast: 1
   chaseState: {fileID: 1877507680712426813}
   wanderState: {fileID: 7617700759616487960}
   attackDuration: 1.38
@@ -278,7 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d5c0669d65a434b8312794f655ea8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFast: 1
   attackState: {fileID: 1682659734817547122}
   wanderState: {fileID: 7617700759616487960}
 --- !u!1 &6956622093373777222
@@ -324,7 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddaf9a3e66b6c94990d59de6d6750bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFast: 1
   idleTime: 4
   detectionLayer:
     serializedVersion: 2
