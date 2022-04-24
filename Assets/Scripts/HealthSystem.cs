@@ -6,8 +6,10 @@ public class HealthSystem : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
     private Rigidbody rigidbody;
+    private RagdollManager ragdollManager;
 
     private void Awake() {
+        ragdollManager = GetComponent<RagdollManager>();
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -18,8 +20,9 @@ public class HealthSystem : MonoBehaviour {
     public void TakeDamage(int damageTaken) {
         currentHealth -= damageTaken;
 
-        if (currentHealth <= 0)
-            Debug.Log("Die pls");
+        if (currentHealth <= 0) {
+            ragdollManager.ActivateRagdoll();
+        }
     }
 
     public void Heal(int healTaken) {
