@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WanderState : State {
-    public bool isFast;
     public int idleTime;
     public LayerMask detectionLayer;
     public ChaseState chaseState;
@@ -31,10 +30,6 @@ public class WanderState : State {
                     return chaseState;
                 }
             }
-        }
-
-        if (isFast) {
-            DecreaseSpeed();
         }
 
         if (!isWaypointSet) {
@@ -69,9 +64,5 @@ public class WanderState : State {
             return true;
         }
         return false;
-    }
-
-    private void DecreaseSpeed() {
-        enemyManager.navMeshAgent.speed = 0.1f;
     }
 }
