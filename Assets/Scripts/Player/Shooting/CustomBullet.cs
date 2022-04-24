@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomBullet : MonoBehaviour
-{
+public class CustomBullet : MonoBehaviour {
     //Assignables
     public Rigidbody rb;
     public GameObject explosion;
     public LayerMask whatIsEnemies;
 
     //Stats
-    [Range(0f,1f)]
+    [Range(0f, 1f)]
     public float bounciness;
     public bool useGravity;
 
@@ -29,75 +28,76 @@ public class CustomBullet : MonoBehaviour
     int collisions;
     PhysicMaterial physics_mat;
 
-    private void Start()
-    {
+    private void Start() {
         Setup();
     }
 
-    private void Update()
-    {
+    private void Update() {
         //When to explode:
-        if (collisions > maxCollisions) Explode();
+        if (collisions > maxCollisions)
+            Explode();
 
         //Count down lifetime
         maxLifetime -= Time.deltaTime;
-        if (maxLifetime <= 0) Explode();
+        if (maxLifetime <= 0)
+            Explode();
     }
 
-    private void Explode()
-    {
+    private void Explode() {
         //Instantiate explosion
-        if (explosion != null) Instantiate(explosion, transform.position, Quaternion.identity);
-        
+        if (explosion != null)
+            Instantiate(explosion, transform.position, Quaternion.identity);
+
         //Check for enemies 
-        Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
-        for (int i = 0; i < enemies.Length; i++)
-        {
+        Collider [] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
+        for (int i = 0; i < enemies.Length; i++) {
             //Get component of enemy and call Take Damage
 
             //Just an example!
+            if (enemies [i].GetComponent<HealthSystem>() != null) {
+                enemies [i].GetComponent<HealthSystem>().TakeDamage(40);
+            }
             ///enemies[i].GetComponent<ShootingAi>().TakeDamage(explosionDamage);
 
             //Add explosion force (if enemy has a rigidbody)
-            if (enemies[i].GetComponent<Rigidbody>())
-                enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRange);
+            if (enemies [i].GetComponent<Rigidbody>())
+                enemies [i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRange);
         }
-       
+
         //Add a little delay, just to make sure everything works fine
         Invoke("Delay", 0.05f);
-       
-        //Invoke("DelayExplosion", 5f);
-    }
-    private void Delay()
-    {
-        // FindObjectOfType<SFXManager>().PlaySFX("");
-        AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);  
-        Destroy(gameObject);
-     
-        
 
         //Invoke("DelayExplosion", 5f);
     }
-    
+    private void Delay() {
+        // FindObjectOfType<SFXManager>().PlaySFX("");
+        AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
+        Destroy(gameObject);
+
+
+
+        //Invoke("DelayExplosion", 5f);
+    }
+
     // private void DelayExplosion()
     // {
     //     Destroy(explosion);
     // }
 
-    private void OnCollisionEnter(Collision collision)
-    {
+    private void OnCollisionEnter(Collision collision) {
         //Don't count collisions with other bullets
-        if (collision.collider.CompareTag("Bullet")) return;
+        if (collision.collider.CompareTag("Bullet"))
+            return;
 
         //Count up collisions
         collisions++;
 
         //Explode if bullet hits an enemy directly and explodeOnTouch is activated
-        if (collision.collider.CompareTag("Enemy") && explodeOnTouch) Explode();
+        if (collision.collider.CompareTag("Enemy") && explodeOnTouch)
+            Explode();
     }
 
-    private void Setup()
-    {
+    private void Setup() {
         //Create a new Physic material
         physics_mat = new PhysicMaterial();
         physics_mat.bounciness = bounciness;

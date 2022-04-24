@@ -31,6 +31,7 @@ public class Bullet : MonoBehaviour {
             Destroy(gameObject);
         }
         else if (collision.transform.tag == "Zombie") {
+            collision.gameObject.GetComponent<HealthSystem>().TakeDamage(10);
             Instantiate(bloodImpactPrefab, transform.position,
                 Quaternion.LookRotation(collision.contacts [0].normal));
             Destroy(gameObject);
