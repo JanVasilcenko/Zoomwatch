@@ -25,20 +25,20 @@ public class Bullet : MonoBehaviour {
             return;
         }
 
-        if (collision.transform.tag == "Player") {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("whatIsEnemies")) {
+
+            if (collision.gameObject.GetComponent<HealthSystem>() != null) {
+                collision.gameObject.GetComponent<HealthSystem>().TakeDamage(10);
+            }
+            else {
+                if (collision.gameObject.GetComponentInParent<HealthSystem>() != null) {
+                    collision.gameObject.GetComponentInParent<HealthSystem>().TakeDamage(10);
+                }
+            }
+
             Instantiate(bloodImpactPrefab, transform.position,
                 Quaternion.LookRotation(collision.contacts [0].normal));
-            Destroy(gameObject);
-        }
-        else if (collision.transform.tag == "Zombie") {
-            collision.gameObject.GetComponent<HealthSystem>().TakeDamage(10);
-            Instantiate(bloodImpactPrefab, transform.position,
-                Quaternion.LookRotation(collision.contacts [0].normal));
-            Destroy(gameObject);
-        }
-        else {
-            Instantiate(otherImpactPrefab, transform.position,
-                Quaternion.LookRotation(collision.contacts [0].normal));
+
             Destroy(gameObject);
         }
     }
