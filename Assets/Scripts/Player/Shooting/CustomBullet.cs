@@ -55,7 +55,7 @@ public class CustomBullet : MonoBehaviour {
 
             //Just an example!
             if (enemies [i].GetComponent<HealthSystem>() != null) {
-                enemies [i].GetComponent<HealthSystem>().TakeDamage(40);
+                enemies [i].GetComponent<HealthSystem>().TakeDamage(explosionDamage);
             }
             ///enemies[i].GetComponent<ShootingAi>().TakeDamage(explosionDamage);
 
@@ -65,12 +65,13 @@ public class CustomBullet : MonoBehaviour {
         }
 
         //Add a little delay, just to make sure everything works fine
-        Invoke("Delay", 0.05f);
+        Invoke("Delay", 0.01f);
 
         //Invoke("DelayExplosion", 5f);
     }
     private void Delay() {
         // FindObjectOfType<SFXManager>().PlaySFX("");
+        explosionDamage = 0;
         AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
         Destroy(gameObject);
 
@@ -93,7 +94,7 @@ public class CustomBullet : MonoBehaviour {
         collisions++;
 
         //Explode if bullet hits an enemy directly and explodeOnTouch is activated
-        if (collision.collider.CompareTag("Enemy") && explodeOnTouch)
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("whatIsEnemies") && explodeOnTouch)
             Explode();
     }
 
