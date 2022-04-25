@@ -5,7 +5,6 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
-    public int deleteAfterDeathCountdown;
     private Rigidbody rigidbody;
     private RagdollManager ragdollManager;
 
@@ -22,7 +21,8 @@ public class HealthSystem : MonoBehaviour {
         currentHealth -= damageTaken;
         if (currentHealth <= 0) {
             ragdollManager.ActivateRagdoll();
-            Invoke("DestroyCorpse", deleteAfterDeathCountdown);
+            ragdollManager.DestroyCorpseTimer();
+            enabled = false;
         }
     }
 
@@ -39,7 +39,5 @@ public class HealthSystem : MonoBehaviour {
         }
     }
 
-    private void DestroyCorpse() {
-        Destroy(this.gameObject);
-    }
+
 }

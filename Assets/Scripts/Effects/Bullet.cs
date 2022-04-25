@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour {
     public float minDestroyTime;
     [Tooltip("Maximum time after impact that the bullet is destroyed")]
     public float maxDestroyTime;
+    public int damage;
 
     public GameObject bloodImpactPrefab;
     public GameObject otherImpactPrefab;
@@ -32,7 +33,7 @@ public class Bullet : MonoBehaviour {
             }
             else {
                 if (collision.gameObject.GetComponentInParent<HealthSystem>() != null) {
-                    collision.gameObject.GetComponentInParent<HealthSystem>().TakeDamage(10);
+                    collision.gameObject.GetComponentInParent<HealthSystem>().TakeDamage(damage);
                 }
             }
 

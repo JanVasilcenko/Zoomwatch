@@ -61,9 +61,14 @@
     <Compile Include="Assets\Scripts\Sound\SFXManager.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Camera\HeadBob.cs" />
+    <Compile Include="Assets\Scripts\AI\State Machine\Scavenger\ScavengerWanderState.cs" />
     <Compile Include="Assets\Scripts\MeshDestroy.cs" />
+    <Compile Include="Assets\Scripts\AI\AimingManager.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\AI\State Machine\Zombie\ZombieAttackState.cs" />
+    <Compile Include="Assets\Scripts\AI\State Machine\Zombie\ZombieChaseState.cs" />
     <Compile Include="Assets\Scripts\Player\Camera\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\AI\State Machine\Scavenger\ScavengerChaseState.cs" />
     <Compile Include="Assets\Scripts\Effects\Effect.cs" />
     <Compile Include="Assets\Scripts\Utils\CommonUtils.cs" />
     <Compile Include="Assets\Scripts\Player\Shooting\Gun.cs" />
@@ -73,21 +78,21 @@
     <Compile Include="Assets\Scripts\Player\Grappling\GrapplingGun.cs" />
     <Compile Include="Assets\Scripts\AI\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\AI\State Machine\State.cs" />
-    <Compile Include="Assets\Scripts\AI\State Machine\Zombie\ChaseState.cs" />
     <Compile Include="Assets\Scripts\Player\Animation\AnimationStateController.cs" />
     <Compile Include="Assets\Scripts\Player\Grappling\Spring.cs" />
+    <Compile Include="Assets\Scripts\AI\RagdollManager.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\Sliding.cs" />
-    <Compile Include="Assets\Scripts\AI\State Machine\Zombie\AttackState.cs" />
+    <Compile Include="Assets\Scripts\AI\State Machine\Zombie\ZombieWanderState.cs" />
     <Compile Include="Assets\Scripts\Utils\Tags.cs" />
-    <Compile Include="Assets\Scripts\AI\State Machine\Zombie\WanderState.cs" />
     <Compile Include="Assets\Scripts\Effects\Bullet.cs" />
     <Compile Include="Assets\Scripts\AI\Animations\EnemyAnimationController.cs" />
     <Compile Include="Assets\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\Utils\AnimationParameters.cs" />
+    <Compile Include="Assets\Scripts\AI\State Machine\Scavenger\ScavengerAttackState.cs" />
     <Compile Include="Assets\Scripts\Player\Movement\WallRunning.cs" />
     <Compile Include="Assets\Scripts\Player\Grappling\RotateGun.cs" />
     <Compile Include="Assets\Scripts\Player\Grappling\GrapplingRope.cs" />
-    <Compile Include="Assets\Scripts\AI\RagdollManager.cs" />
+    <Compile Include="Assets\Scripts\AI\ZombieAttackManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />

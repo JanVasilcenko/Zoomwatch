@@ -8,6 +8,7 @@ public class RagdollManager : MonoBehaviour {
     private Animator animator;
     private Rigidbody mainRigidbody;
     private NavMeshAgent navMeshAgent;
+    public int deleteAfterDeathCountdown;
 
     private void Awake() {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
@@ -32,5 +33,13 @@ public class RagdollManager : MonoBehaviour {
             rigidbody.isKinematic = true;
         }
         animator.enabled = true;
+    }
+
+    public void DestroyCorpseTimer() {
+        Invoke("DestroyCorpse", deleteAfterDeathCountdown);
+    }
+
+    private void DestroyCorpse() {
+        Destroy(this.gameObject);
     }
 }
