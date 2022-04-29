@@ -5,6 +5,10 @@ public class Gun : MonoBehaviour
 {
       //bullet 
     public GameObject bullet;
+    public GameObject bullet1;
+    public GameObject bullet2;
+    public GameObject bullet3;
+    public GameObject bullet4;
 
     //bullet force
     public float shootForce, upwardForce;
@@ -36,6 +40,7 @@ public class Gun : MonoBehaviour
 
     private void Awake()
     {
+        changeGun1();
         //make sure magazine is full
         bulletsLeft = magazineSize;
         readyToShoot = true; 
@@ -51,6 +56,26 @@ public class Gun : MonoBehaviour
     }
     private void MyInput()
     {
+
+        if(Input.GetButtonDown("Gun1"))
+        {
+            changeGun1();
+        }
+
+        if(Input.GetButtonDown("Gun2"))
+        {
+            changeGun2();
+        }
+
+        if(Input.GetButtonDown("Gun3"))
+        {
+            changeGun3();
+        }
+
+        if(Input.GetButtonDown("Gun4"))
+        {
+            changeGun4();
+        }
         
         
         //Check if allowed to hold down button and take corresponding input
@@ -146,5 +171,54 @@ public class Gun : MonoBehaviour
         //Fill magazine
         bulletsLeft = magazineSize;
         reloading = false;
+    }
+
+    private void changeGun1() 
+    {
+        this.bullet = bullet1;
+        this.shootForce = 50;
+        this.timeBetweenShooting = 0.5f;
+        this.spread = 0;
+        this.magazineSize = 2;
+        this.reloadTime = 0;
+        this.allowButtonHold = false;
+        this.recoilForce = 0;
+    }
+
+    private void changeGun2() 
+    {
+        this.bullet = bullet2;
+        this.shootForce = 100;
+        this.timeBetweenShooting = 0.5f;
+        this.spread = 0;
+        this.magazineSize = 20;
+        this.reloadTime = 0;
+        this.allowButtonHold = false;
+        this.recoilForce = 1;
+        this.bulletsPerTap = 5;
+    }
+
+    private void changeGun3() 
+    {
+        this.bullet = bullet3;
+        this.shootForce = 200;
+        this.timeBetweenShooting = 0.1f;
+        this.spread = 0.1f;
+        this.magazineSize = 200;
+        this.reloadTime = 0;
+        this.allowButtonHold = true;
+        this.recoilForce = 0;
+    }
+
+    private void changeGun4() 
+    {
+        this.bullet = bullet4;
+        this.shootForce = 50;
+        this.timeBetweenShooting = 1;
+        this.spread = 0;
+        this.magazineSize = 5;
+        this.reloadTime = 0;
+        this.allowButtonHold = true;
+        this.recoilForce = 0;
     }
 }
