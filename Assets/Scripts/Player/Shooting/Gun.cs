@@ -201,9 +201,9 @@ public class Gun : MonoBehaviour
     private void changeGun3() 
     {
         this.bullet = bullet3;
-        this.shootForce = 200;
+        this.shootForce = 50;
         this.timeBetweenShooting = 0.1f;
-        this.spread = 0.1f;
+        this.spread = 0.0f;
         this.magazineSize = 200;
         this.reloadTime = 0;
         this.allowButtonHold = true;

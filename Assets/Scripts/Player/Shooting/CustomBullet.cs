@@ -23,7 +23,7 @@ public class CustomBullet : MonoBehaviour {
     public float maxLifetime;
     public bool explodeOnTouch = true;
 
-    public AudioClip explosionSound;
+    //public AudioClip explosionSound;
 
     int collisions;
     PhysicMaterial physics_mat;
@@ -72,7 +72,7 @@ public class CustomBullet : MonoBehaviour {
     private void Delay() {
         // FindObjectOfType<SFXManager>().PlaySFX("");
         explosionDamage = 0;
-        AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
+       // AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
         Destroy(gameObject);
 
 
