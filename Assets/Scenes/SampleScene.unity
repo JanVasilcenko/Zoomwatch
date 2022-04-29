@@ -3107,14 +3107,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46760fa1ca824b545ba17484bfe18dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5418522221465998019, guid: 2e93a94ecf427c5449981820299dbf35, type: 3}
+  bullet: {fileID: 1893140680271815819, guid: ae8d93994a107ca4fb2d49a5d87c6819, type: 3}
+  bullet1: {fileID: 1893140680271815819, guid: ae8d93994a107ca4fb2d49a5d87c6819, type: 3}
+  bullet2: {fileID: 140902, guid: 35084be2685034545aaa733102047e05, type: 3}
+  bullet3: {fileID: 5418522221465998019, guid: 2e93a94ecf427c5449981820299dbf35, type: 3}
+  bullet4: {fileID: 4422748544967989846, guid: 1f89a67b347269946b8042f913affabd, type: 3}
   shootForce: 200
   upwardForce: 0
   timeBetweenShooting: 0.2
   spread: 0.1
   reloadTime: 1
   timeBetweenShots: 0
-  magazineSize: 100
+  magazineSize: 5
   bulletsPerTap: 1
   allowButtonHold: 1
   playerRb: {fileID: 665320099}
