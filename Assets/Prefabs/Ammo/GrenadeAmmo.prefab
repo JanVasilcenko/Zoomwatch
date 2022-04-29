@@ -7,9 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 127934, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 129294, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_Name
       value: GrenadeAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_TagString
@@ -289,6 +301,25 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &373691168160012638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422748544967989846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7ed61cb0b78fa4fb42b057caf6e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAfter: 5
+  destroyOnImpact: 1
+  minDestroyTime: 0
+  maxDestroyTime: 5
+  damage: 90
+  bloodImpactPrefab: {fileID: 1829163952570794, guid: f171ac3dbb620c44e81cd88ddee1cbbd, type: 3}
+  otherImpactPrefab: {fileID: 0}
 --- !u!114 &880922371991945594
 MonoBehaviour:
   m_ObjectHideFlags: 0
