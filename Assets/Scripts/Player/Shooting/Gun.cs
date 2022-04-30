@@ -10,6 +10,9 @@ public class Gun : MonoBehaviour
     public GameObject bullet3;
     public GameObject bullet4;
 
+    //ammo
+    public int bulletAmmo2, bulletAmmo3, bulletAmmo4;
+
     //bullet force
     public float shootForce, upwardForce;
 
@@ -40,6 +43,9 @@ public class Gun : MonoBehaviour
 
     private void Awake()
     {
+        bulletAmmo2 = 0;
+        bulletAmmo3 = 0;
+        bulletAmmo4 = 0;
         changeGun1();
         //make sure magazine is full
         bulletsLeft = magazineSize;
@@ -83,9 +89,9 @@ public class Gun : MonoBehaviour
         else shooting = Input.GetButtonDown("Shoot") || (Input.GetAxis("Shoot") != 0);
 
         //Reloading 
-        if (Input.GetButtonDown("Reload") && bulletsLeft < magazineSize && !reloading) Reload();
+        //if (Input.GetButtonDown("Reload") && bulletsLeft < magazineSize && !reloading) Reload();
         //Reload automatically when trying to shoot without ammo
-        if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
+        if (readyToShoot && shooting && !reloading && bulletsLeft <= 0 && bullet == bullet1) Reload();
 
         //Shooting
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
@@ -191,7 +197,7 @@ public class Gun : MonoBehaviour
         this.shootForce = 100;
         this.timeBetweenShooting = 0.5f;
         this.spread = 0;
-        this.magazineSize = 20;
+        this.magazineSize = bulletAmmo4;
         this.reloadTime = 0;
         this.allowButtonHold = false;
         this.recoilForce = 1;
@@ -204,7 +210,7 @@ public class Gun : MonoBehaviour
         this.shootForce = 50;
         this.timeBetweenShooting = 0.1f;
         this.spread = 0.0f;
-        this.magazineSize = 200;
+        this.magazineSize = bulletAmmo3;
         this.reloadTime = 0;
         this.allowButtonHold = true;
         this.recoilForce = 0;
@@ -216,7 +222,7 @@ public class Gun : MonoBehaviour
         this.shootForce = 50;
         this.timeBetweenShooting = 1;
         this.spread = 0;
-        this.magazineSize = 5;
+        this.magazineSize = bulletAmmo4;
         this.reloadTime = 0;
         this.allowButtonHold = true;
         this.recoilForce = 0;
