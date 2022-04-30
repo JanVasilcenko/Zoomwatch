@@ -37,9 +37,12 @@ public class playerCollectibles : MonoBehaviour
     //     currentMelee = melee;
     // }
 
-    private void addAmmo(int ammoAmount)
+    private void addAmmo(int shotgunAmmo, int laserAmmo, int grenadeAmmo)
     {
-        currentAmmo += ammoAmount;
+        Gun gun = GetComponent<Gun>();
+        gun.bulletAmmo2 += shotgunAmmo;
+        gun.bulletAmmo3 += laserAmmo;
+        gun.bulletAmmo4 += grenadeAmmo;
     }
 
     private void addHealth(int healthAmount)
@@ -91,11 +94,11 @@ public class playerCollectibles : MonoBehaviour
         // }
         if(other.CompareTag("collectibleAmmoSmall")){
             other.gameObject.SetActive(false);
-            addAmmo(50);
+            addAmmo(10, 50, 2);
         }
         if(other.CompareTag("collectibleAmmoLarge")){
             other.gameObject.SetActive(false);
-            addAmmo(100);
+            addAmmo(20, 100, 4);
         }
         if(other.CompareTag("collectibleMedicSmall")){
             other.gameObject.SetActive(false);
