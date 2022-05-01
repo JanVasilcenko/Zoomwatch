@@ -271,7 +271,7 @@ public class MeshDestroy : MonoBehaviour
             GameObject = new GameObject(original.name);
             GameObject.transform.position = original.transform.position;
             GameObject.transform.rotation = original.transform.rotation;
-            GameObject.transform.localScale = original.transform.localScale;
+            GameObject.transform.localScale = original.transform.lossyScale;
 
             var mesh = new Mesh();
             mesh.name = original.GetComponent<MeshFilter>().mesh.name;

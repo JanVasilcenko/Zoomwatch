@@ -3319,6 +3319,9 @@ MonoBehaviour:
   bullet2: {fileID: 140902, guid: 35084be2685034545aaa733102047e05, type: 3}
   bullet3: {fileID: 5418522221465998019, guid: 2e93a94ecf427c5449981820299dbf35, type: 3}
   bullet4: {fileID: 4422748544967989846, guid: 1f89a67b347269946b8042f913affabd, type: 3}
+  bulletAmmo2: 1000
+  bulletAmmo3: 1000
+  bulletAmmo4: 1000
   shootForce: 200
   upwardForce: 0
   timeBetweenShooting: 0.2
