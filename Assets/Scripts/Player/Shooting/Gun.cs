@@ -185,10 +185,11 @@ public class Gun : MonoBehaviour
         this.shootForce = 50;
         this.timeBetweenShooting = 0.5f;
         this.spread = 0;
-        this.magazineSize = 2;
+        this.magazineSize = 1;
         this.reloadTime = 0;
         this.allowButtonHold = false;
         this.recoilForce = 0;
+        this.bulletsPerTap = 1;
     }
 
     private void changeGun2() 
@@ -214,6 +215,7 @@ public class Gun : MonoBehaviour
         this.reloadTime = 0;
         this.allowButtonHold = true;
         this.recoilForce = 0;
+        this.bulletsPerTap = 1;
     }
 
     private void changeGun4() 
@@ -226,5 +228,6 @@ public class Gun : MonoBehaviour
         this.reloadTime = 0;
         this.allowButtonHold = true;
         this.recoilForce = 0;
+        this.bulletsPerTap = 1;
     }
 }
