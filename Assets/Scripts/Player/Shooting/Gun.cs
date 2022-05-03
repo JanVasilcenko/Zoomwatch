@@ -47,6 +47,8 @@ public class Gun : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
+    public Sprite sprite4;
+
 
     //bug fixing :D
     public bool allowInvoke = true;
@@ -98,6 +100,8 @@ public class Gun : MonoBehaviour
 
         if(Input.GetButtonDown("Gun4"))
         {
+            changeImg4();   
+
             changeGun4();
 
         }
@@ -270,7 +274,11 @@ public class Gun : MonoBehaviour
 
     }
     
-    
+    private void changeImg4()
+    { bullet1Image.sprite = sprite4;
+        //gameObject.GetComponent<Image> ().sprite = sprite3;
+
+    }
  
 
    
