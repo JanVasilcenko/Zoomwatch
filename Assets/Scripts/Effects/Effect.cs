@@ -6,7 +6,11 @@ public class Effect : MonoBehaviour {
     [SerializeField]
     private float delayUntilDestroy;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     void Start() {
+        audioSource.PlayOneShot(audioClip);
         Invoke("Destroy", delayUntilDestroy);
     }
 
