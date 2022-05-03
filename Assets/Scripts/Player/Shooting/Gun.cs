@@ -59,6 +59,7 @@ public class Gun : MonoBehaviour
     public AudioClip shoutgunSound;
     public AudioClip laserSound;
     public AudioClip granadeSound;
+    public AudioClip switchSound;
 
 
 
@@ -288,26 +289,42 @@ public class Gun : MonoBehaviour
 
     private void changeImg1()
     {
+        if (bullet != bullet1)
+        {
+             audioSource.PlayOneShot(switchSound);
+        }
+        
+        if(bullet1)
+       
         bullet1Image.sprite = sprite1;
-        //gameObject.GetComponent<Image> ().sprite = sprite1;
-
     }
     private void changeImg2()
     {
+        
+        if (bullet != bullet2)
+        {
+            audioSource.PlayOneShot(switchSound);
+        }        
         bullet1Image.sprite = sprite2;
-       // gameObject.GetComponent<Image> ().sprite = sprite2;
-
     }
     private void changeImg3()
-    { bullet1Image.sprite = sprite3;
-        //gameObject.GetComponent<Image> ().sprite = sprite3;
-
+    
+    {
+        if (bullet != bullet3)
+        {
+            audioSource.PlayOneShot(switchSound);
+        }        
+        bullet1Image.sprite = sprite3;
     }
     
     private void changeImg4()
-    { bullet1Image.sprite = sprite4;
-        //gameObject.GetComponent<Image> ().sprite = sprite3;
-
+    
+    {         
+        if (bullet != bullet4)
+        {
+            audioSource.PlayOneShot(switchSound);
+        }
+        bullet1Image.sprite = sprite4;
     }
  
 
