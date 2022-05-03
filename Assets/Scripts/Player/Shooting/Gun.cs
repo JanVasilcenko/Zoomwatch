@@ -52,6 +52,17 @@ public class Gun : MonoBehaviour
 
     //bug fixing :D
     public bool allowInvoke = true;
+    
+    [Header("Sound")]
+    public AudioSource audioSource;
+    public AudioClip regularGunSound;
+    public AudioClip shoutgunSound;
+    public AudioClip laserSound;
+    public AudioClip granadeSound;
+
+
+
+    
 
     private void Awake()
     {
@@ -161,6 +172,7 @@ public class Gun : MonoBehaviour
         //Add forces to bullet
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(camera.transform.up * upwardForce, ForceMode.Impulse);
+        
 
         //Instantiate muzzle flash, if you have one
         if (muzzleFlash != null)
@@ -182,6 +194,24 @@ public class Gun : MonoBehaviour
         //if more than one bulletsPerTap make sure to repeat shoot function
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
+
+        if (bullet == bullet1)
+        {
+            audioSource.PlayOneShot(regularGunSound);
+
+        } else if (bullet == bullet2)
+        {
+            audioSource.PlayOneShot(shoutgunSound);
+
+        } else if (bullet == bullet3)
+        {
+            audioSource.PlayOneShot(laserSound);
+        }
+        else
+        {
+            audioSource.PlayOneShot(granadeSound);
+
+        }
     }
     private void ResetShot()
     {
