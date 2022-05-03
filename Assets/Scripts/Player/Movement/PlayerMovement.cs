@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour {
     [Header("Movement")]
@@ -18,6 +19,9 @@ public class PlayerMovement : MonoBehaviour {
     private float lastDesiredMoveSpeed;
     
     public float groundDrag;
+    public AudioSource audioSource;
+    
+   
 
     [Header("Jumping")]
     public float jumpForce;
@@ -88,6 +92,15 @@ public class PlayerMovement : MonoBehaviour {
         MyInput();
         SpeedControl();
         StateHandler();
+        
+        //sound step
+
+        if (grounded && rb.velocity.magnitude > 2f && !audioSource.isPlaying)
+        {
+            audioSource.volume = Random.Range(0.07f, 0.15f);
+            audioSource.pitch = Random.Range(0.7f, 1.1f);
+            audioSource.Play();
+        }
         
         //handle drag
         if (grounded)

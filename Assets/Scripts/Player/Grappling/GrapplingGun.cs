@@ -13,6 +13,9 @@ public class GrapplingGun : MonoBehaviour
     private float maxDistance = 100f;
     private SpringJoint joint;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     void Update() {
         if (Input.GetButtonDown("Grapple")) {
             StartGrapple();
@@ -56,6 +59,8 @@ public class GrapplingGun : MonoBehaviour
                 joint.damper = 2f;
                 joint.massScale = 4f; 
             }
+            
+            audioSource.PlayOneShot(audioClip);
         }
     }
 
