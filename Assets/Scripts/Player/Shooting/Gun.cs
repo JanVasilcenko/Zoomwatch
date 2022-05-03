@@ -40,10 +40,7 @@ public class Gun : MonoBehaviour
 
     //bug fixing :D
     public bool allowInvoke = true;
-    
-    //Sound
-    public AudioClip gunSound;
-    public AudioSource audioSource;
+
     private void Awake()
     {
         bulletAmmo2 = 0;
@@ -141,7 +138,7 @@ public class Gun : MonoBehaviour
         //Add forces to bullet
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(camera.transform.up * upwardForce, ForceMode.Impulse);
-        audioSource.PlayOneShot(gunSound);
+
         //Instantiate muzzle flash, if you have one
         if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);

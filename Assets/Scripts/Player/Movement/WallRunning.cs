@@ -37,10 +37,6 @@ public class WallRunning : MonoBehaviour
     public PlayerCamera camera;
     private PlayerMovement pm;
     private Rigidbody rb;
-    
-    [Header("Sound")]
-    public AudioClip wallSlideSound;
-    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -142,8 +138,6 @@ public class WallRunning : MonoBehaviour
             camera.DoTilt(-10f);
         if(wallRight)
             camera.DoTilt(10f);
-        audioSource.PlayOneShot(wallSlideSound);
-
     }
     
     private void WallRunningMovement()
@@ -180,11 +174,6 @@ public class WallRunning : MonoBehaviour
         //reset camera effects
         camera.DoFov(60f);
         camera.DoTilt(0f);
-
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
     }
 
     private void WallJump()

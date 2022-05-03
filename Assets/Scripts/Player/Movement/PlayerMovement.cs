@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour {
     [Header("Movement")]
@@ -14,9 +13,6 @@ public class PlayerMovement : MonoBehaviour {
     public bool wallrunning;
     public float slideSpeed;
     public bool sliding;
-    public AudioSource movementAudioSource;
-    public AudioClip walkSound;
-
 
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -29,7 +25,6 @@ public class PlayerMovement : MonoBehaviour {
     public float airMultiplier;
     private bool readyToJump;
     public AudioClip jumpSound;
-    public AudioSource audioSource;
 
     [Header("Crouching")]
     public float crouchSpeed;
@@ -89,13 +84,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         //ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-        if (grounded && rb.velocity.magnitude > 2f && !audioSource.isPlaying)
-        {
-            audioSource.pitch = Random.Range(0.8f, 1);
-            audioSource.volume = Random.Range(0.07f, 0.15f);
 
-            audioSource.PlayOneShot(walkSound);
-        }
         MyInput();
         SpeedControl();
         StateHandler();
@@ -280,7 +269,7 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        audioSource.PlayOneShot(jumpSound);
+        AudioSource.PlayClipAtPoint(jumpSound, gameObject.transform.position);
 
     }
 
