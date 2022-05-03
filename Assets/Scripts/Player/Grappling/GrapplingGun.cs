@@ -12,9 +12,11 @@ public class GrapplingGun : MonoBehaviour
     public Transform gunTip, camera, player;
     private float maxDistance = 100f;
     private SpringJoint joint;
-
+    public AudioClip grappleSound;
+    public AudioSource audioSource;
     void Update() {
         if (Input.GetButtonDown("Grapple")) {
+
             StartGrapple();
         }
         else if (Input.GetButtonUp("Grapple")) {
@@ -43,11 +45,14 @@ public class GrapplingGun : MonoBehaviour
             // joint.spring = 4.5f;
             // joint.damper = 7f;
             // joint.massScale = 4.5f;
+            audioSource.PlayOneShot(grappleSound);
+
             if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapplePull))
             {
                 joint.spring = 100f;
                 joint.damper = 5f;
                 joint.massScale = 4f;
+
             }
 
             else
@@ -68,6 +73,7 @@ public class GrapplingGun : MonoBehaviour
     }
 
     public bool IsGrappling() {
+
         return joint != null;
     }
 
