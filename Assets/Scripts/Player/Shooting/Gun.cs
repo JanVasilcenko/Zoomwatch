@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class Gun : MonoBehaviour
     public GameObject bullet2;
     public GameObject bullet3;
     public GameObject bullet4;
+    
+    
 
     //ammo
-    public int bulletAmmo2, bulletAmmo3, bulletAmmo4;
+    public int bulletAmmo1, bulletAmmo2, bulletAmmo3, bulletAmmo4;
 
     //bullet force
     public float shootForce, upwardForce;
-
+         
     //Gun stats
     public float timeBetweenShooting, spread, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -37,12 +40,20 @@ public class Gun : MonoBehaviour
     //Graphics
     public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
+    
+    
+    //images
+    public Image bullet1Image;
+    public Sprite sprite1;
+    public Sprite sprite2;
+    public Sprite sprite3;
 
     //bug fixing :D
     public bool allowInvoke = true;
 
     private void Awake()
     {
+        bulletAmmo1 = 9999;
         bulletAmmo2 = 0;
         bulletAmmo3 = 0;
         bulletAmmo4 = 0;
@@ -65,22 +76,30 @@ public class Gun : MonoBehaviour
 
         if(Input.GetButtonDown("Gun1"))
         {
+            changeImg1();   
             changeGun1();
         }
 
         if(Input.GetButtonDown("Gun2"))
-        {
+        {       
+
+            changeImg2();   
+
             changeGun2();
         }
 
         if(Input.GetButtonDown("Gun3"))
         {
+          
+            changeImg3();   
+
             changeGun3();
         }
 
         if(Input.GetButtonDown("Gun4"))
         {
             changeGun4();
+
         }
         
         
@@ -185,7 +204,7 @@ public class Gun : MonoBehaviour
         this.shootForce = 50;
         this.timeBetweenShooting = 0.5f;
         this.spread = 0;
-        this.magazineSize = 1;
+        this.magazineSize = 999;
         this.reloadTime = 0;
         this.allowButtonHold = false;
         this.recoilForce = 0;
@@ -203,6 +222,7 @@ public class Gun : MonoBehaviour
         this.allowButtonHold = false;
         this.recoilForce = 1;
         this.bulletsPerTap = 5;
+
     }
 
     private void changeGun3() 
@@ -216,6 +236,7 @@ public class Gun : MonoBehaviour
         this.allowButtonHold = true;
         this.recoilForce = 0;
         this.bulletsPerTap = 1;
+
     }
 
     private void changeGun4() 
@@ -230,4 +251,27 @@ public class Gun : MonoBehaviour
         this.recoilForce = 0;
         this.bulletsPerTap = 1;
     }
+
+    private void changeImg1()
+    {
+        bullet1Image.sprite = sprite1;
+        //gameObject.GetComponent<Image> ().sprite = sprite1;
+
+    }
+    private void changeImg2()
+    {
+        bullet1Image.sprite = sprite2;
+       // gameObject.GetComponent<Image> ().sprite = sprite2;
+
+    }
+    private void changeImg3()
+    { bullet1Image.sprite = sprite3;
+        //gameObject.GetComponent<Image> ().sprite = sprite3;
+
+    }
+    
+    
+ 
+
+   
 }
