@@ -29,8 +29,9 @@ public class PlayerMovement : MonoBehaviour {
     public float airMultiplier;
     private bool readyToJump;
     public AudioClip jumpSound;
+    public AudioSource audioSourceJump;
 
-    [Header("Crouching")]
+        [Header("Crouching")]
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
@@ -282,8 +283,7 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        AudioSource.PlayClipAtPoint(jumpSound, gameObject.transform.position);
-
+        audioSourceJump.PlayOneShot(jumpSound);
     }
 
     private void ResetJump() {
