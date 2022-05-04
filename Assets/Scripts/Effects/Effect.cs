@@ -10,7 +10,11 @@ public class Effect : MonoBehaviour {
     public AudioClip audioClip;
 
     void Start() {
-        audioSource.PlayOneShot(audioClip);
+        if (!audioSource.isPlaying)
+        {
+               audioSource.PlayOneShot(audioClip);
+        }
+     
         Invoke("Destroy", delayUntilDestroy);
     }
 
