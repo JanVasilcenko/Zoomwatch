@@ -765,8 +765,8 @@
  <Reference Include="Unity.Searcher.Editor">
  <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
  <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
@@ -780,11 +780,14 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
  <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Animation.Rigging">
  <HintPath>/Users/patrikhorny/Documents/Semesters/VIA 6th semester/GMD/Zoomwatch/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
