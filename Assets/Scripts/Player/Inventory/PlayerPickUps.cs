@@ -11,10 +11,17 @@ public class PlayerPickUps : MonoBehaviour
 
     public AudioClip healthSound;
 
+    private Gun gun;
+    private HealthSystem healthSystem;
+
+    private PlayerMovement pm;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        gun = GetComponent<Gun>();
+        healthSystem = GetComponent<HealthSystem>();
+        pm = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -24,28 +31,28 @@ public class PlayerPickUps : MonoBehaviour
     }
 
     private void addAmmo(){
-        Gun gun = GetComponent<Gun>();
+        Debug.Log(gun);
         gun.bulletAmmo2 += ammoAmount2;
         gun.bulletAmmo3 += ammoAmount3;
         gun.bulletAmmo4 += ammoAmount4;
-        Debug.Log("PickUP ammo");
+        Debug.Log("PickUP ammo end");
     }
 
     private void addHealth(){
         AudioSource.PlayClipAtPoint(healthSound, gameObject.transform.position);
-        //todo
+        healthSystem.Heal(healthAmount);
         Debug.Log("PickUP health");
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
-            //set visibility of object
-            gameObject.SetActive(false);
-            Debug.Log("This");
             if(ammoPickUp)
                 addAmmo();
             if(healthPickUp)
                 addHealth();
+
+            //set visibility of object
+            gameObject.SetActive(false);
         }
     }
 }

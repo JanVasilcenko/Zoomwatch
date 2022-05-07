@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoPickUp: 1
-  healthPickUp: 1
+  healthPickUp: 0
   healthAmount: 50
   ammoAmount2: 100
   ammoAmount3: 100
@@ -3359,7 +3359,7 @@ GameObject:
   - component: {fileID: 1269323813}
   m_Layer: 0
   m_Name: GunPosition
-  m_TagString: Untagged
+  m_TagString: PlayerGunPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
