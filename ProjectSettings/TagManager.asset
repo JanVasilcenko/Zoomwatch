@@ -26,6 +26,7 @@ TagManager:
   - weapon
   - pistol
   - ammoGrenade
+  - PlayerPickUp
   layers:
   - Default
   - TransparentFX
