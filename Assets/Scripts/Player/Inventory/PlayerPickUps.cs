@@ -40,6 +40,8 @@ public class PlayerPickUps : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
             //set visibility of object
+            gameObject.SetActive(false);
+            Debug.Log("This");
             if(ammoPickUp)
                 addAmmo();
             if(healthPickUp)
