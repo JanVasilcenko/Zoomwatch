@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 36
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 37
+  controlID: 71
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 126
+  controlID: 72
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -501,8 +501,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -470
     m_HBaseRangeMax: 470
-    m_VBaseRangeMin: -268.5
-    m_VBaseRangeMax: 268.5
+    m_VBaseRangeMin: -258
+    m_VBaseRangeMax: 258
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -519,11 +519,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 940
-      height: 537
+      height: 516
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 470, y: 268.5}
+    m_Translation: {x: 470, y: 258}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -531,9 +531,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -470
-      y: -268.5
+      y: -258
       width: 940
-      height: 537
+      height: 516
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 940, y: 537}
@@ -569,10 +569,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 188}
-      m_SelectedIDs: d85a0000
+      scrollPos: {x: 0, y: 45804}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 62ebffff46fbffff404e0000
+      m_ExpandedIDs: 6696ffffe6bcffff8cd9ffffa4d9ffffeefafffffc760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -632,9 +632,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.315877, y: -0.5420663, z: 2.263826}
+    m_Target: {x: 570.21655, y: 55.74766, z: 64.37263}
     speed: 2
-    m_Value: {x: 4.315877, y: -0.5420663, z: 2.263826}
+    m_Value: {x: 570.21655, y: 55.74766, z: 64.37263}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -681,9 +681,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1832031, y: -0.07706089, z: 0.014643241, w: -0.98009115}
+    m_Target: {x: -0.06396228, y: -0.6381658, z: -0.053845525, w: 0.765594}
     speed: 2
-    m_Value: {x: -0.18319784, y: -0.075579524, z: 0.014366301, w: -0.9800611}
+    m_Value: {x: -0.0638693, y: -0.6391919, z: -0.05393115, w: 0.76449054}
   m_Size:
     m_Target: 6.744414
     speed: 2
@@ -750,22 +750,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\School\6. semester\GMD\Zoomwatch
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 444}
-    m_SelectedIDs: d85a0000
-    m_LastClickedID: 23256
-    m_ExpandedIDs: 00000000b65a0000b85a0000ba5a0000bc5a0000be5a0000c05a0000cc5a0000d25a0000da5a0000745b00008c5b000000ca9a3b
+    scrollPos: {x: 0, y: 124}
+    m_SelectedIDs: b6a50400
+    m_LastClickedID: 304566
+    m_ExpandedIDs: 000000007aaf00007caf00007eaf000080af000082af000084af0000deaf0000e6af000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -793,7 +793,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b65a0000b85a0000ba5a0000bc5a0000be5a0000c05a0000
+    m_ExpandedIDs: 000000007aaf00007caf00007eaf000080af000082af000084af0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
