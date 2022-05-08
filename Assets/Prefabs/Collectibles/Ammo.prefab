@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 144640, guid: d1e39fb71edd545458d9129e09602f42, type: 3}
       propertyPath: m_Name
-      value: SM_Item_AmmoPack_01
+      value: SM_Item_AmmoPack_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 144640, guid: d1e39fb71edd545458d9129e09602f42, type: 3}
       propertyPath: m_TagString
-      value: collectibleAmmoLarge
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 464334, guid: d1e39fb71edd545458d9129e09602f42, type: 3}
       propertyPath: m_RootOrder
@@ -65,3 +65,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1e39fb71edd545458d9129e09602f42, type: 3}
+--- !u!1 &4001485079667791103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 144640, guid: d1e39fb71edd545458d9129e09602f42, type: 3}
+  m_PrefabInstance: {fileID: 4001485079667663359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2397504158053970583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001485079667791103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76020640ccc609b4abd107b3d48a8a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoPickUp: 1
+  healthPickUp: 0
+  healthAmount: 0
+  ammoAmount2: 100
+  ammoAmount3: 50
+  ammoAmount4: 10
+  healthSound: {fileID: 0}
+  gun: {fileID: 0}
+  healthSystem: {fileID: 0}

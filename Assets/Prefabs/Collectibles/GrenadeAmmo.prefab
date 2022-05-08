@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Grenade_Base_01
+      value: SM_Wep_Grenade_Base_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 190812, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_TagString
-      value: weaponGrenade
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 482352, guid: 33b7b512b06f0d747be082f99d6312a1, type: 3}
       propertyPath: m_RootOrder
@@ -93,8 +93,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654893705936131552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cef2e6e4150c3904eacf05bb73d4f81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5990810738066965717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654893705936131552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76020640ccc609b4abd107b3d48a8a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoPickUp: 1
+  healthPickUp: 0
+  healthAmount: 0
+  ammoAmount2: 0
+  ammoAmount3: 0
+  ammoAmount4: 5
+  healthSound: {fileID: 0}
+  gun: {fileID: 0}
+  healthSystem: {fileID: 0}
