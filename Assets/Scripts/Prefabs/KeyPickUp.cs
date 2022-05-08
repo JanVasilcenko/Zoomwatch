@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KeyPickUp : MonoBehaviour
 {
     public bool key, diamond;
-
     public PlayerInventory playerInventory;
     
     void Start() {
