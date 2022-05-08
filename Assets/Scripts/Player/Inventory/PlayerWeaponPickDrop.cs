@@ -46,16 +46,16 @@ public class PlayerWeaponPickDrop : MonoBehaviour
                 currentItem = hit.transform.gameObject;
                 hasWeapon = true;
 
-                foreach(var c in hit.transform.GetComponentsInChildren<Collider>())
-                {
-                    if(c != null)
-                        c.enabled = false;
-                }
-                foreach(var s in hit.transform.GetComponentsInChildren<WeaponScript>())
-                {
-                    if(s != null)
-                        s.enabled = false;
-                }
+                // foreach(var c in hit.transform.GetComponentsInChildren<Collider>())
+                // {
+                //     if(c != null)
+                //         c.enabled = false;
+                // }
+                // foreach(var s in hit.transform.GetComponentsInChildren<WeaponScript>())
+                // {
+                //     if(s != null)
+                //         s.enabled = false;
+                // }
 
                 currentItem.transform.parent = transform;
                 currentItem.transform.localPosition = Vector3.zero;
@@ -68,16 +68,16 @@ public class PlayerWeaponPickDrop : MonoBehaviour
     {
         currentItem.transform.parent = null;
 
-        foreach(var c in currentItem.transform.GetComponentsInChildren<Collider>())
-        {
-            if(c != null)
-                c.enabled = true;
-        }
-        foreach(var s in currentItem.transform.GetComponentsInChildren<WeaponScript>())
-        {
-            if(s != null)
-                s.enabled = true;
-        }
+        // foreach(var c in currentItem.transform.GetComponentsInChildren<Collider>())
+        // {
+        //     if(c != null)
+        //         c.enabled = true;
+        // }
+        // foreach(var s in currentItem.transform.GetComponentsInChildren<WeaponScript>())
+        // {
+        //     if(s != null)
+        //         s.enabled = true;
+        // }
 
         RaycastHit hitDown;
         Physics.Raycast(transform.position, -Vector3.up, out hitDown);

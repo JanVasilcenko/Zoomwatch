@@ -36,7 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Weapon\WeaponScript.cs" />
+     <Compile Include="Assets\Scripts\Prefabs\RotateScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory\playerCollectibles.cs" />
@@ -63,7 +63,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\AI\State Machine\Scavenger\ScavengerChaseState.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\Weapon\AmmoChange.cs" />
+     <Compile Include="Assets\Scripts\Prefabs\AmmoChange.cs" />
+     <Compile Include="Assets\Scripts\Player\Inventory\PlayerInventory.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\Scripts\Effects\Effect.cs" />
@@ -101,6 +102,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
      <Compile Include="Assets\Scripts\Utils\AnimationParameters.cs" />
+     <Compile Include="Assets\Scripts\Prefabs\KeyPickUp.cs" />
      <Compile Include="Assets\Scripts\AI\State Machine\Scavenger\ScavengerAttackState.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -111,6 +113,8 @@
      <Compile Include="Assets\Scripts\Player\Grappling\RotateGun.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\Player\Grappling\GrapplingRope.cs" />
+     <Compile Include="Assets\Scripts\Prefabs\ChurchDoor.cs" />
+     <Compile Include="Assets\Scripts\Prefabs\BusDoor.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Graphics\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
