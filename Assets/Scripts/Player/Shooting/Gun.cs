@@ -90,32 +90,26 @@ public class Gun : MonoBehaviour
 
         if(Input.GetButtonDown("Gun1"))
         {
-            changeImg1();   
             changeGun1();
+            changeImg1();   
         }
 
         if(Input.GetButtonDown("Gun2"))
         {       
-
-            changeImg2();   
-
             changeGun2();
+            changeImg2();   
         }
 
         if(Input.GetButtonDown("Gun3"))
         {
-          
-            changeImg3();   
-
             changeGun3();
+            changeImg3();   
         }
 
         if(Input.GetButtonDown("Gun4"))
         {
-            changeImg4();   
-
             changeGun4();
-
+            changeImg4();   
         }
         
         

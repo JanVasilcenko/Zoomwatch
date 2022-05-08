@@ -11,18 +11,8 @@ public class PlayerPickUps : MonoBehaviour
 
     public AudioClip healthSound;
 
-    private Gun gun;
-    private HealthSystem healthSystem;
-
-    private PlayerMovement pm;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        gun = GetComponent<Gun>();
-        healthSystem = GetComponent<HealthSystem>();
-        pm = GetComponent<PlayerMovement>();
-    }
+    public Gun gun;
+    public HealthSystem healthSystem;
 
     // Update is called once per frame
     void Update()

@@ -2135,13 +2135,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76020640ccc609b4abd107b3d48a8a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoPickUp: 0
-  healthPickUp: 1
+  ammoPickUp: 1
+  healthPickUp: 0
   healthAmount: 50
   ammoAmount2: 100
   ammoAmount3: 100
   ammoAmount4: 100
   healthSound: {fileID: 8300000, guid: 5f4b9bd4c542f4360bc5e2b2bd8da618, type: 3}
+  gun: {fileID: 1269323814}
+  healthSystem: {fileID: 0}
 --- !u!1 &560499354
 GameObject:
   m_ObjectHideFlags: 0
