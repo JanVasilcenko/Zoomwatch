@@ -16,7 +16,7 @@ public class ChurchDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerInventory.getDiamonds() >= 1)
+        if(playerInventory.getDiamonds() > 6)
             gameObject.SetActive(false);
     }
 }
