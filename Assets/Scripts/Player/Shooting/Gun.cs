@@ -140,6 +140,35 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
+
+        if (bullet == bullet1)
+        {
+            audioSource.PlayOneShot(regularGunSound);
+        } 
+        else if (bullet == bullet2)
+        {
+            if(bulletAmmo2 > 0){
+                audioSource.PlayOneShot(shoutgunSound);
+                bulletAmmo2--;
+            }
+            else return;
+        } 
+        else if (bullet == bullet3)
+        {
+            if(bulletAmmo3 > 0){
+                audioSource.PlayOneShot(laserSound);
+                bulletAmmo3--;
+            }
+            else return;
+        }
+        else
+        {
+            if(bulletAmmo4 > 0){
+                audioSource.PlayOneShot(shoutgunSound);
+                bulletAmmo4--;
+            }
+            else return;
+        }
         
         //streialnie 
         readyToShoot = false;
@@ -195,24 +224,6 @@ public class Gun : MonoBehaviour
         //if more than one bulletsPerTap make sure to repeat shoot function
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
-
-        if (bullet == bullet1)
-        {
-            audioSource.PlayOneShot(regularGunSound);
-
-        } else if (bullet == bullet2)
-        {
-            audioSource.PlayOneShot(shoutgunSound);
-
-        } else if (bullet == bullet3)
-        {
-            audioSource.PlayOneShot(laserSound);
-        }
-        else
-        {
-            audioSource.PlayOneShot(granadeSound);
-
-        }
     }
     private void ResetShot()
     {
