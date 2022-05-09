@@ -7,9 +7,9 @@ public class KeyPickUp : MonoBehaviour
 {
     public bool key, diamond;
     public PlayerInventory playerInventory;
-    private AudioSource audioSource;
-    void Start() {
-        
+  
+    void Start()
+    {
     }
 
     // Update is called once per frame
@@ -20,8 +20,8 @@ public class KeyPickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
-            if(diamond){
-                
+            if(diamond)
+            {
                 playerInventory.incrementDiamonds();
                 Debug.Log(playerInventory.getDiamonds());
             }

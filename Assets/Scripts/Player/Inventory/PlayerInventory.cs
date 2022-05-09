@@ -18,6 +18,9 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI keyEndText;
     public TextMeshProUGUI keyValueText;
 
+    public AudioClip diamondSound;
+
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +33,16 @@ public class PlayerInventory : MonoBehaviour
         restDiamondText.alpha = 0;
         neededValue = 7;
         keyEndText.enabled = false;
-        
+
+        audioSource = GetComponent<AudioSource>();
         InvokeRepeating("FadeIn",6.1f, 0f);
     }
 
     public void incrementDiamonds(){
         diamondValue++;
         diamondText.text = diamondValue.ToString();
-
+        
+        audioSource.PlayOneShot(diamondSound);
         if (diamondValue == neededValue)
         {
             keyText.enabled = true;
@@ -84,6 +89,7 @@ public class PlayerInventory : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
 
         keyEndText.enabled = false;
+        Destroy(keyEndText);
     }
 
 }
