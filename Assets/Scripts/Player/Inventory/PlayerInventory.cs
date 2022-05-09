@@ -16,7 +16,8 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI restKeyText;
     
     public TextMeshProUGUI keyEndText;
-    
+    public TextMeshProUGUI keyValueText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,10 +48,13 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void setKey(){
+        keyValueText.text = 1.ToString();
+
         keyValue = true;
     }
 
-    public bool getKey(){
+    public bool getKey()
+    {
         return keyValue;
     }
 

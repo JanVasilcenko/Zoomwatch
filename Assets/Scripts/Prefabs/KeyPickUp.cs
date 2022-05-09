@@ -7,7 +7,7 @@ public class KeyPickUp : MonoBehaviour
 {
     public bool key, diamond;
     public PlayerInventory playerInventory;
-    
+    private AudioSource audioSource;
     void Start() {
         
     }
@@ -21,6 +21,7 @@ public class KeyPickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
             if(diamond){
+                
                 playerInventory.incrementDiamonds();
                 Debug.Log(playerInventory.getDiamonds());
             }
