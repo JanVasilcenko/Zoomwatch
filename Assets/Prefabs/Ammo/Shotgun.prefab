@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6373978750855183741}
   - component: {fileID: 5325104381551638404}
   - component: {fileID: 8274535744225562876}
+  - component: {fileID: 8294520954267766996}
   m_Layer: 10
   m_Name: Shotgun
   m_TagString: Bullet
@@ -161,7 +162,6 @@ MonoBehaviour:
   maxCollisions: 1
   maxLifetime: 1
   explodeOnTouch: 1
-  explosionSound: {fileID: 0}
 --- !u!65 &5325104381551638404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -282,3 +282,16 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!135 &8294520954267766996
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.040043276
+  m_Center: {x: 0, y: 0, z: 0}
