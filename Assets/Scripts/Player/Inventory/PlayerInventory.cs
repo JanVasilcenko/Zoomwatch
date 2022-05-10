@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     
     public TextMeshProUGUI keyEndText;
     public TextMeshProUGUI keyValueText;
+    public TextMeshProUGUI keyFoundText;
 
     public AudioClip diamondSound;
 
@@ -30,9 +31,9 @@ public class PlayerInventory : MonoBehaviour
         keyText.enabled = false;
         restKeyText.enabled = false;
         keyEndText.enabled = false;
+        keyFoundText.enabled = false;
         restDiamondText.alpha = 0;
         neededValue = 7;
-        keyEndText.enabled = false;
 
         audioSource = GetComponent<AudioSource>();
         InvokeRepeating("FadeIn",6.1f, 0f);
@@ -47,14 +48,14 @@ public class PlayerInventory : MonoBehaviour
         {
             keyText.enabled = true;
             restKeyText.enabled = true;
-            StartCoroutine(waiter());
+            StartCoroutine(waiter(keyEndText));
             DestroyText();
         }
     }
 
     public void setKey(){
         keyValueText.text = 1.ToString();
-
+        StartCoroutine(waiter(keyFoundText)); 
         keyValue = true;
     }
 
@@ -81,15 +82,15 @@ public class PlayerInventory : MonoBehaviour
         
     }
 
-    IEnumerator waiter()
+    IEnumerator waiter( TextMeshProUGUI text)
     {
-        keyEndText.enabled = true;
+        text.enabled = true;
         yield return new WaitForSecondsRealtime(6);
-        keyEndText.CrossFadeAlpha(0,1f,false);
+        text.CrossFadeAlpha(0,1f,false);
         yield return new WaitForSecondsRealtime(1);
 
-        keyEndText.enabled = false;
-        Destroy(keyEndText);
+        text.enabled = false;
+        Destroy(text);
     }
 
 }
