@@ -88,35 +88,40 @@ public class Gun : MonoBehaviour
     private void MyInput()
     {
 
-        if(Input.GetButtonDown("Gun1"))
+        if (!PauseMenu.isPaused)
         {
-            changeImg1();   
-            changeGun1();
+             if(Input.GetButtonDown("Gun1"))
+                    {
+                        changeImg1();   
+                        changeGun1();
+                    }
+            
+                    if(Input.GetButtonDown("Gun2"))
+                    {       
+            
+                        changeImg2();   
+            
+                        changeGun2();
+                    }
+            
+                    if(Input.GetButtonDown("Gun3"))
+                    {
+                      
+                        changeImg3();   
+            
+                        changeGun3();
+                    }
+            
+                    if(Input.GetButtonDown("Gun4"))
+                    {
+                        changeImg4();   
+            
+                        changeGun4();
+            
+                    }
         }
 
-        if(Input.GetButtonDown("Gun2"))
-        {       
-
-            changeImg2();   
-
-            changeGun2();
-        }
-
-        if(Input.GetButtonDown("Gun3"))
-        {
-          
-            changeImg3();   
-
-            changeGun3();
-        }
-
-        if(Input.GetButtonDown("Gun4"))
-        {
-            changeImg4();   
-
-            changeGun4();
-
-        }
+       
         
         
         //Check if allowed to hold down button and take corresponding input
@@ -129,7 +134,7 @@ public class Gun : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0 && bullet == bullet1) Reload();
 
         //Shooting
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && !PauseMenu.isPaused)
         {
             //Set bullets shot to 0
             bulletsShot = 0;

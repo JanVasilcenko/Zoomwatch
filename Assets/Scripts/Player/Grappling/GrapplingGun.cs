@@ -72,8 +72,12 @@ public class GrapplingGun : MonoBehaviour
                 // joint.massScale = 4f; 
                 
             }
+
+            if (!PauseMenu.isPaused)
+            {
+                audioSource.PlayOneShot(audioClip);
+            }
             
-            audioSource.PlayOneShot(audioClip);
         }
     }
 

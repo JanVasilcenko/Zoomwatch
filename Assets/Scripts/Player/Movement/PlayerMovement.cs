@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour {
         
         //sound step
 
-        if (grounded && rb.velocity.magnitude > 2f && !audioSource.isPlaying)
+        if (grounded && rb.velocity.magnitude > 2f && !audioSource.isPlaying && !PauseMenu.isPaused)
         {
             audioSource.volume = Random.Range(0.07f, 0.15f);
             audioSource.pitch = Random.Range(0.7f, 1.1f);
@@ -111,7 +111,10 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        MovePlayer();
+        
+              MovePlayer();
+        
+      
     }
 
     private void MyInput() {
