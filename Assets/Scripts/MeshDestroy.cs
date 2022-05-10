@@ -13,13 +13,6 @@ public class MeshDestroy : MonoBehaviour
     public int CutCascades = 1;
     public float ExplodeForce = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // if (Input.GetKeyDown("k"))
@@ -305,6 +298,6 @@ public class MeshDestroy : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Explode if bullet hits an enemy directly and explodeOnTouch is activated
-        if (collision.collider.CompareTag("Bullet")) DestroyMesh();
+        if (collision.collider.CompareTag(Tags.bullet)) DestroyMesh();
     }
 }

@@ -21,7 +21,7 @@ public class PlayerInventory : MonoBehaviour
     public AudioClip diamondSound;
 
     private AudioSource audioSource;
-    // Start is called before the first frame update
+
     void Start()
     {
         diamondValue = 6;

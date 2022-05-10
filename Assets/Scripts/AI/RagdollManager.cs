@@ -30,6 +30,7 @@ public class RagdollManager : MonoBehaviour {
 
     public void DeactivateRagdoll() {
         foreach (Rigidbody rigidbody in rigidbodies) {
+            rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
             rigidbody.isKinematic = true;
         }
         animator.enabled = true;

@@ -87,7 +87,7 @@ public class CustomBullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         //Don't count collisions with other bullets
-        if (collision.collider.CompareTag("Bullet"))
+        if (collision.collider.CompareTag(Tags.bullet))
             return;
 
         //Count up collisions

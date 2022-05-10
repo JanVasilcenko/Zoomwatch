@@ -11,7 +11,6 @@ public class AmmoChange : MonoBehaviour
     public GameObject bullet3;
     public GameObject bullet4;
 
-    // Start is called before the first frame update
     void Start()
     {
         gun = GetComponent<Gun>();
@@ -19,7 +18,6 @@ public class AmmoChange : MonoBehaviour
         getGun1();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetButtonDown("Gun1"))

@@ -9,14 +9,12 @@ public class AnimationStateController : MonoBehaviour
     public PlayerMovement pm;
    //public TwoBoneIKConstraint twoBoneIKConstraint;
     
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         //twoBoneIKConstraint.data.target = 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("Sprint") && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0) && pm.grounded)

@@ -19,13 +19,11 @@ public class HeadBob : MonoBehaviour {
     public LayerMask whatIsGround;
     private Rigidbody rb;
 
-    // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody>();
         startPosition = camera.localPosition;
     }
 
-    // Update is called once per frame
     void Update() {
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
         if (!enable)

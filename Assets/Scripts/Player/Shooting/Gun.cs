@@ -61,10 +61,6 @@ public class Gun : MonoBehaviour
     public AudioClip granadeSound;
     public AudioClip switchSound;
 
-
-
-    
-
     private void Awake()
     {
         bulletAmmo1 = 9999;

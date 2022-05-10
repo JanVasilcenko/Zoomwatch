@@ -17,19 +17,6 @@ public class PlayerPickUps : MonoBehaviour
     public Gun gun;
     public HealthSystem healthSystem;
 
-    // Start is called before the first frame update
-
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void addAmmo(){
         Debug.Log(gun);
         gun.bulletAmmo2 += ammoAmount2;
@@ -45,7 +32,7 @@ public class PlayerPickUps : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("Player")){
+        if(other.CompareTag(Tags.player)){
             if(ammoPickUp)
             
                 addAmmo();
