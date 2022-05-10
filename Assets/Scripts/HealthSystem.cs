@@ -8,6 +8,9 @@ public class HealthSystem : MonoBehaviour {
     private Rigidbody rigidbody;
     private RagdollManager ragdollManager;
 
+    public AudioSource audioSource;
+    public AudioClip deathSound;
+
     private void Awake() {
         ragdollManager = GetComponent<RagdollManager>();
         rigidbody = GetComponent<Rigidbody>();
@@ -20,6 +23,7 @@ public class HealthSystem : MonoBehaviour {
     public void TakeDamage(int damageTaken) {
         currentHealth -= damageTaken;
         if (currentHealth <= 0) {
+            audioSource.PlayOneShot(deathSound);
             ragdollManager.ActivateRagdoll();
             ragdollManager.DestroyCorpseTimer();
             enabled = false;
