@@ -38,14 +38,12 @@ public class WallRunning : MonoBehaviour
     private PlayerMovement pm;
     private Rigidbody rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         pm = GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckForWall();

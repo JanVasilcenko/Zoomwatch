@@ -63,8 +63,6 @@ public class PlayerMovement : MonoBehaviour {
 
     public MovementState movementState;
 
- 
-
     public enum MovementState {
         walking,
         sprinting,
@@ -74,7 +72,6 @@ public class PlayerMovement : MonoBehaviour {
         air
     }
 
-    // Start is called before the first frame update
     private void Start() {
         rb = GetComponent<Rigidbody>();
        

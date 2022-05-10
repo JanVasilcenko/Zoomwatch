@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 // Inspiration https://www.youtube.com/watch?v=JivuXdrIHK0
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject pauseMenu;
     
     public static bool isPaused;
@@ -16,19 +15,16 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
-               
                 ResumeGame();
             }
             else
             {
-              
                 PauseGame();
             }
         }

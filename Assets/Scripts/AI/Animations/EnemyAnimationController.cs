@@ -9,6 +9,7 @@ public class EnemyAnimationController : MonoBehaviour {
 
     private void Awake() {
         animator = GetComponent<Animator>();
+        animator.logWarnings = false;
     }
 
     public Animator GetAnimator() {

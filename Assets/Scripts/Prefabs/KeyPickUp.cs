@@ -7,19 +7,9 @@ public class KeyPickUp : MonoBehaviour
 {
     public bool key, diamond;
     public PlayerInventory playerInventory;
-  
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("Player")){
+        if(other.CompareTag(Tags.player)){
             if(diamond)
             {
                 playerInventory.incrementDiamonds();
@@ -31,9 +21,6 @@ public class KeyPickUp : MonoBehaviour
             }
             //set visibility of object
             gameObject.SetActive(false);
-
-            
-            
         }
     }
 }

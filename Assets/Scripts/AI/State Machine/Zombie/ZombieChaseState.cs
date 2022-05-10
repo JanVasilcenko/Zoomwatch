@@ -21,7 +21,7 @@ public class ZombieChaseState : State {
         }
 
         enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-        //enemyManager.LookAtTarget();
+        enemyManager.LookAtTarget();
         enemyAnimationController.SetChasingAnimation();
         return this;
     }

@@ -92,33 +92,33 @@ public class playerCollectibles : MonoBehaviour
         //     other.gameObject.SetActive(false);
         //     setMelee("machette");
         // }
-        if(other.CompareTag("collectibleAmmoSmall")){
+        if(other.CompareTag(Tags.smallAmmo)){
             other.gameObject.SetActive(false);
             addAmmo(10, 50, 2);
         }
-        if(other.CompareTag("collectibleAmmoLarge")){
+        if(other.CompareTag(Tags.largeAmmo)){
             other.gameObject.SetActive(false);
             addAmmo(20, 100, 4);
         }
-        if(other.CompareTag("collectibleMedicSmall")){
+        if(other.CompareTag(Tags.smallMedic)){
             other.gameObject.SetActive(false);
             addHealth(20);
         }
-        if(other.CompareTag("collectibleMedicLarge")){
+        if(other.CompareTag(Tags.largeMedic)){
             AudioSource.PlayClipAtPoint(healthSound, gameObject.transform.position);
 
             other.gameObject.SetActive(false);
             addHealth(50);
         }
-        if(other.CompareTag("collectibleSmallMoney")){
+        if(other.CompareTag(Tags.smallMoney)){
             other.gameObject.SetActive(false);
             addMoney(500);
         }
-        if(other.CompareTag("collectibleMediumMoney")){
+        if(other.CompareTag(Tags.mediumMoney)){
             other.gameObject.SetActive(false);
             addMoney(1000);
         }
-        if(other.CompareTag("collectibleLargeMoney")){
+        if(other.CompareTag(Tags.largeMoney)){
             other.gameObject.SetActive(false);
             addMoney(1500);
         }
