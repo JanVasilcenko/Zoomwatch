@@ -15,7 +15,7 @@ public class PlayerPickUps : MonoBehaviour
 
 
     public Gun gun;
-    public HealthSystem healthSystem;
+    public HealthSystemPlayer healthSystem;
 
     private void addAmmo(){
         Debug.Log(gun);
