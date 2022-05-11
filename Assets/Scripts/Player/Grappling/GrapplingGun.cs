@@ -10,7 +10,7 @@ public class GrapplingGun : MonoBehaviour
     public LayerMask whatIsGrappleable;
     public LayerMask whatIsGrapplePull;
     public Transform gunTip, camera, player;
-    private float maxDistance = 100f;
+    private float maxDistance = 150f;
     private SpringJoint joint;
 
     public float spring;
