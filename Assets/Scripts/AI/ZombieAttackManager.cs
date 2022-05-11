@@ -18,5 +18,9 @@ public class ZombieAttackManager : MonoBehaviour {
         if (enemyManager.currentTarget.CompareTag(Tags.scavenger)) {
             enemyManager.currentTarget.gameObject.GetComponent<HealthSystem>().TakeDamage(damage);
         }
+
+        if(enemyManager.currentTarget.CompareTag(Tags.player)) {
+            enemyManager.currentTarget.gameObject.GetComponent<HealthSystemPlayer>().TakeDamage(damage);
+        }
     }
 }
