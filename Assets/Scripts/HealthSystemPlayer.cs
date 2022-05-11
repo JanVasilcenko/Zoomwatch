@@ -23,10 +23,7 @@ public class HealthSystemPlayer : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            TakeDamage(20);
-        }
+        
     }
 
     void Start() {
@@ -37,7 +34,6 @@ public class HealthSystemPlayer : MonoBehaviour {
     public void TakeDamage(int damageTaken) {
         currentHealth -= damageTaken;
         healthBarScript.SetHealth(currentHealth);
-        
         audioSource.volume = Random.Range(0.10f, 0.15f);
         audioSource.pitch = Random.Range(0.85f, 1f);
         audioSource.PlayOneShot(damageSound);
