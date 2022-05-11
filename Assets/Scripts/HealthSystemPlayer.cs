@@ -35,7 +35,7 @@ public class HealthSystemPlayer : MonoBehaviour {
         currentHealth -= damageTaken;
         healthBarScript.SetHealth(currentHealth);
         audioSource.volume = Random.Range(0.10f, 0.15f);
-        audioSource.pitch = Random.Range(0.85f, 1f);
+        audioSource.pitch = Random.Range(0.9f, 1f);
         audioSource.PlayOneShot(damageSound);
         
         if (currentHealth <= 0) {
