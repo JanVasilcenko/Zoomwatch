@@ -19,6 +19,8 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI keyValueText;
     public TextMeshProUGUI keyFoundText;
 
+    public GameObject deathScreen;
+
     public AudioClip diamondSound;
 
     private AudioSource audioSource;
@@ -33,6 +35,7 @@ public class PlayerInventory : MonoBehaviour
         keyEndText.enabled = false;
         keyFoundText.enabled = false;
         restDiamondText.alpha = 0;
+        deathScreen.SetActive(false);
         neededValue = 7;
 
         audioSource = GetComponent<AudioSource>();
