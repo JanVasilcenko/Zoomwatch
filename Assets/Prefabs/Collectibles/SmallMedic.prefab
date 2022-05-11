@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1064907277127340, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
       propertyPath: m_Name
-      value: SM_Item_Sausage_Bun_01 Variant
+      value: SmallMedic
       objectReference: {fileID: 0}
     - target: {fileID: 1064907277127340, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
       propertyPath: m_TagString
@@ -18,6 +18,18 @@ PrefabInstance:
     - target: {fileID: 4151399154525228, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151399154525228, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151399154525228, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151399154525228, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4151399154525228, guid: 05c8d9df626edbe4cb10ceefeb99f240, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,6 +100,43 @@ MonoBehaviour:
   ammoAmount2: 0
   ammoAmount3: 0
   ammoAmount4: 0
+  audioSource: {fileID: 0}
+  ammoSound: {fileID: 0}
   healthSound: {fileID: 0}
   gun: {fileID: 0}
   healthSystem: {fileID: 0}
+--- !u!114 &113503507481427671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879178697684197334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76020640ccc609b4abd107b3d48a8a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoPickUp: 0
+  healthPickUp: 1
+  healthAmount: 20
+  ammoAmount2: 0
+  ammoAmount3: 0
+  ammoAmount4: 0
+  audioSource: {fileID: 0}
+  ammoSound: {fileID: 0}
+  healthSound: {fileID: 0}
+  gun: {fileID: 0}
+  healthSystem: {fileID: 0}
+--- !u!114 &3852308143017087547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879178697684197334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef2e6e4150c3904eacf05bb73d4f81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

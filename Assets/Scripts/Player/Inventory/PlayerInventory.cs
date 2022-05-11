@@ -27,7 +27,7 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
-        diamondValue = 6;
+        diamondValue = 0;
         keyValue = false;
         diamondText.alpha = 0;
         keyText.enabled = false;

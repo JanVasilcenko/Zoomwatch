@@ -109,9 +109,11 @@ MonoBehaviour:
   ammoPickUp: 1
   healthPickUp: 0
   healthAmount: 0
-  ammoAmount2: 100
+  ammoAmount2: 20
   ammoAmount3: 50
-  ammoAmount4: 10
+  ammoAmount4: 5
+  audioSource: {fileID: 0}
+  ammoSound: {fileID: 0}
   healthSound: {fileID: 0}
   gun: {fileID: 0}
   healthSystem: {fileID: 0}

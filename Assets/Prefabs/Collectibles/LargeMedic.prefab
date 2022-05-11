@@ -100,6 +100,20 @@ MonoBehaviour:
   ammoAmount2: 0
   ammoAmount3: 0
   ammoAmount4: 0
+  audioSource: {fileID: 0}
+  ammoSound: {fileID: 0}
   healthSound: {fileID: 0}
   gun: {fileID: 0}
   healthSystem: {fileID: 0}
+--- !u!114 &-2367164631612378730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496056532792394010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef2e6e4150c3904eacf05bb73d4f81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
