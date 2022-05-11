@@ -102,6 +102,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!135 &1654046561452746030
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5418522221465998019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.012450669
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!96 &-1290764710676053323
 TrailRenderer:
   serializedVersion: 2
@@ -241,19 +254,6 @@ MonoBehaviour:
   destroyOnImpact: 1
   minDestroyTime: 0
   maxDestroyTime: 0.5
-  damage: 30
+  damage: 15
   bloodImpactPrefab: {fileID: 1079409791486800, guid: b39ba55e20c520442890d059b89cb26a, type: 3}
   otherImpactPrefab: {fileID: 0}
---- !u!135 &1654046561452746030
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5418522221465998019}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.012450669
-  m_Center: {x: 0, y: 0, z: 0}

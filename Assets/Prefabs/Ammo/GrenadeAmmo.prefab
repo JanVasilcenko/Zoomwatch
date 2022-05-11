@@ -317,7 +317,7 @@ MonoBehaviour:
   destroyOnImpact: 1
   minDestroyTime: 0
   maxDestroyTime: 5
-  damage: 90
+  damage: 50
   bloodImpactPrefab: {fileID: 1829163952570794, guid: f171ac3dbb620c44e81cd88ddee1cbbd, type: 3}
   otherImpactPrefab: {fileID: 0}
 --- !u!114 &880922371991945594
@@ -339,10 +339,9 @@ MonoBehaviour:
     m_Bits: 512
   bounciness: 0.5
   useGravity: 1
-  explosionDamage: 10
-  explosionRange: 5
+  explosionDamage: 50
+  explosionRange: 20
   explosionForce: 1200
   maxCollisions: 5
   maxLifetime: 3
   explodeOnTouch: 1
-  explosionSound: {fileID: 8300000, guid: e68a8e9367ca74165bfc692092a728e2, type: 3}

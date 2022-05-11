@@ -134,7 +134,7 @@ MonoBehaviour:
   destroyOnImpact: 0
   minDestroyTime: 0.01
   maxDestroyTime: 0.05
-  damage: 60
+  damage: 30
   bloodImpactPrefab: {fileID: 1792092052645256, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
   otherImpactPrefab: {fileID: 0}
 --- !u!114 &6373978750855183741
