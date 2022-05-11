@@ -144,7 +144,8 @@ public class Gun : MonoBehaviour
 
         if (bullet == bullet1)
         {
-            audioSource.PlayOneShot(regularGunSound);
+            if(regularGunSound != null)
+                audioSource.PlayOneShot(regularGunSound);
         } 
         else if (bullet == bullet2)
         {
@@ -165,7 +166,7 @@ public class Gun : MonoBehaviour
         else
         {
             if(bulletAmmo4 > 0){
-                audioSource.PlayOneShot(shoutgunSound);
+                audioSource.PlayOneShot(granadeSound);
                 bulletAmmo4--;
             }
             else return;
@@ -316,8 +317,11 @@ public class Gun : MonoBehaviour
         if (bullet != bullet2)
         {
             audioSource.PlayOneShot(switchSound);
-        }        
-        bullet1Image.sprite = sprite2;
+        }     
+        
+        if(bullet1Image)
+            bullet1Image.sprite = sprite2;    
+        
     }
     private void changeImg3()
     
@@ -326,7 +330,9 @@ public class Gun : MonoBehaviour
         {
             audioSource.PlayOneShot(switchSound);
         }        
-        bullet1Image.sprite = sprite3;
+        
+        if(bullet1Image)
+            bullet1Image.sprite = sprite3;
     }
     
     private void changeImg4()
@@ -336,7 +342,12 @@ public class Gun : MonoBehaviour
         {
             audioSource.PlayOneShot(switchSound);
         }
-        bullet1Image.sprite = sprite4;
+
+        if (bullet1Image)
+        {
+              bullet1Image.sprite = sprite4;
+        }
+      
     }
  
 
