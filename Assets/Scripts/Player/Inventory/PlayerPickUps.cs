@@ -25,8 +25,10 @@ public class PlayerPickUps : MonoBehaviour
         Debug.Log("PickUP ammo end");
     }
 
-    private void addHealth(){
-        AudioSource.PlayClipAtPoint(healthSound, gameObject.transform.position);
+    private void addHealth()
+    {
+        audioSource.volume = 0.1f;
+        audioSource.PlayOneShot(healthSound);
         healthSystem.Heal(healthAmount);
         Debug.Log("PickUP health");
     }

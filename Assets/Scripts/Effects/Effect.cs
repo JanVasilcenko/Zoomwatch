@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,10 @@ public class Effect : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip audioClip;
 
-    void Start() {
-        if (!audioSource.isPlaying)
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (!audioSource.isPlaying && audioSource)
         {
                audioSource.PlayOneShot(audioClip);
         }
@@ -22,4 +25,11 @@ public class Effect : MonoBehaviour {
         Destroy(this.gameObject);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Zombie"))
+        {
+            audioSource.PlayOneShot(audioClip);
+        }
+    }
 }

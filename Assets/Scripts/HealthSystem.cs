@@ -29,13 +29,7 @@ public class HealthSystem : MonoBehaviour {
             enabled = false;
         }
     }
-
-    public void Heal(int healTaken) {
-        currentHealth += healTaken;
-        if (currentHealth > maxHealth)
-            currentHealth = maxHealth;
-    }
-
+    
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag(Tags.bullet)) {
             rigidbody.velocity = rigidbody.velocity;
