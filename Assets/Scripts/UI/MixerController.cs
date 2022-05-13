@@ -4,8 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 
+// reference https://www.youtube.com/watch?v=C1gCOoDU29M
 public class MixerController : MonoBehaviour
 {
+  
   public AudioMixer audioMixer;
   public TextMeshProUGUI masterText; 
   public TextMeshProUGUI sfxText; 

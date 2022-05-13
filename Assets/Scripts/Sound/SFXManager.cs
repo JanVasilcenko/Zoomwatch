@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 public class SFXManager : MonoBehaviour
 {
 
-    public AudioSource musicAudioSource, sfxSource;
+    public AudioSource musicAudioSource;
 
  
     public static SFXManager instance;
@@ -23,14 +23,6 @@ public class SFXManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void PlaySFX(AudioClip clip)
-    {
-        sfxSource.PlayOneShot(clip);
-    }
+    
 
-    public void PlayMusic(AudioClip clip)
-    {
-        musicAudioSource.clip = clip;
-        musicAudioSource.Play();
-    }
 }
