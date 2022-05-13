@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 7524256641176220519}
-  detectionRadius: 20
+  detectionRadius: 30
   viewableAngle: 180
   turningSpeed: 200
   navMeshAgent: {fileID: 0}
@@ -247,7 +247,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 700
-  m_StoppingDistance: 2
+  m_StoppingDistance: 2.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

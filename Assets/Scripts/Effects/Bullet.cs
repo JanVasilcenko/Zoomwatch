@@ -14,6 +14,8 @@ public class Bullet : MonoBehaviour {
     public float maxDestroyTime;
     public int damage;
 
+    private bool isEnemyBullet;
+
     public GameObject bloodImpactPrefab;
     public GameObject otherImpactPrefab;
 
@@ -21,27 +23,36 @@ public class Bullet : MonoBehaviour {
         StartCoroutine(DestroyAfter());
     }
 
+    public void IsEnemyBullet() {
+        isEnemyBullet = true;
+    }
+
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.GetComponent<Bullet>() != null) {
             return;
         }
 
+        if (isEnemyBullet && collision.gameObject.CompareTag(Tags.player)) {
+            if (collision.gameObject.GetComponentInParent<HealthSystemPlayer>() != null) {
+                collision.gameObject.GetComponentInParent<HealthSystemPlayer>().TakeDamage(damage);
+            }
+        }
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("whatIsEnemies")) {
 
-            if (collision.gameObject.GetComponent<HealthSystem>() != null) {
-                collision.gameObject.GetComponent<HealthSystem>().TakeDamage(10);
-            }
-            else {
-                if (collision.gameObject.GetComponentInParent<HealthSystem>() != null) {
-                    collision.gameObject.GetComponentInParent<HealthSystem>().TakeDamage(damage);
-                }
+            if (collision.gameObject.GetComponentInParent<HealthSystem>() != null) {
+                collision.gameObject.GetComponentInParent<HealthSystem>().TakeDamage(damage);
             }
 
             Instantiate(bloodImpactPrefab, transform.position,
                 Quaternion.LookRotation(collision.contacts [0].normal));
-
-            Destroy(gameObject);
         }
+        else {
+            Instantiate(otherImpactPrefab, transform.position,
+                Quaternion.LookRotation(collision.contacts [0].normal));
+        }
+
+        Destroy(gameObject);
     }
 
     private IEnumerator DestroyAfter() {

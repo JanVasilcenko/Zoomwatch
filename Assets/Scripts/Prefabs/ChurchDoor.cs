@@ -8,7 +8,7 @@ public class ChurchDoor : MonoBehaviour
 
     void Update()
     {
-        if(playerInventory.getDiamonds() > 6)
+        if(playerInventory != null && playerInventory.getDiamonds() > 6)
             gameObject.SetActive(false);
     }
 }
