@@ -108,10 +108,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        
-              MovePlayer();
-        
-      
+        MovePlayer();
     }
 
     private void MyInput() {
@@ -141,30 +138,21 @@ public class PlayerMovement : MonoBehaviour {
 
     private void StateHandler() {
         //Mode - Sliding
-        // if (sliding)
-        // {
-        //     movementState = MovementState.sliding;
-        //
-        //     if (OnSlope() && rb.velocity.y < 0.1f)
-        //     {
-        //         desiredMoveSpeed = slideSpeed;
-        //     }
-        //
-        //     else
-        //     {
-        //         desiredMoveSpeed = sprintSpeed;
-        //     }
-        // }
+         if (sliding)
+         {
+             movementState = MovementState.sliding;
+             moveSpeed = slideSpeed;
+         }
         
         //Mode - Wallrunning
-        if (wallrunning)
+        else if (wallrunning)
         {
             movementState = MovementState.wallrunning;
             moveSpeed = wallrunSpeed;
         }
         
         //Mode - Crouching
-        if (Input.GetButton("Crouch") && grounded) {
+        else if (Input.GetButton("Crouch") && grounded) {
             movementState = MovementState.crouching;
             moveSpeed = crouchSpeed;
             //reset camera effects
@@ -198,39 +186,8 @@ public class PlayerMovement : MonoBehaviour {
             //reset camera effects
             //camera.DoFov(60f);
         }
-        
-        //check if desiredMoveSpeed has changed drastically
-        // if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
-        // {
-        //     StopAllCoroutines();
-        //     StartCoroutine(SmoothlyLerpMoveSpeed());
-        // }
-        //
-        // else
-        // {
-        //     moveSpeed = desiredMoveSpeed;
-        // }
-        //
-        // lastDesiredMoveSpeed = desiredMoveSpeed;
     }
 
-    // private IEnumerator SmoothlyLerpMoveSpeed()
-    // {
-    //     //smoothly lerp movementSpeed to desired value
-    //     float time = 0;
-    //     float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
-    //     float startValue = moveSpeed;
-    //
-    //     while (time < difference)
-    //     {
-    //         moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
-    //         time += Time.deltaTime;
-    //         yield return null;
-    //     }
-    //
-    //     moveSpeed = desiredMoveSpeed;
-    // }
-    
     private void MovePlayer() {
         //calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;

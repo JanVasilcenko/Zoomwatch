@@ -36,6 +36,8 @@ public class Bullet : MonoBehaviour {
             if (collision.gameObject.GetComponentInParent<HealthSystemPlayer>() != null) {
                 collision.gameObject.GetComponentInParent<HealthSystemPlayer>().TakeDamage(damage);
             }
+            
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("whatIsEnemies")) {
@@ -46,13 +48,13 @@ public class Bullet : MonoBehaviour {
 
             Instantiate(bloodImpactPrefab, transform.position,
                 Quaternion.LookRotation(collision.contacts [0].normal));
+            
+            Destroy(gameObject);
         }
         else {
             Instantiate(otherImpactPrefab, transform.position,
                 Quaternion.LookRotation(collision.contacts [0].normal));
         }
-
-        Destroy(gameObject);
     }
 
     private IEnumerator DestroyAfter() {
