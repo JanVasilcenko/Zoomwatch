@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Prefabs\RotateScript.cs" />
-     <Compile Include="Assets\Scripts\Player\Inventory\playerCollectibles.cs" />
      <Compile Include="Assets\Scripts\Sound\SFXManager.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory\PlayerPickUps.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerMovement.cs" />
