@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1397.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 102
+  controlID: 106
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 103
+  controlID: 107
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 104
+  controlID: 108
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -399,10 +399,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 10512}
-      m_SelectedIDs: 147bffff
-      m_LastClickedID: -34028
-      m_ExpandedIDs: f439ffff44fbffff3e5c0000f4650000746600007079000086820000
+      scrollPos: {x: 0, y: 45727}
+      m_SelectedIDs: f0890300
+      m_LastClickedID: 231920
+      m_ExpandedIDs: 8831fcff0026ffff44fbffff70970300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -462,9 +462,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -509.68372, y: -51.350525, z: -650.29517}
+    m_Target: {x: 190.88165, y: 13.883787, z: 211.28755}
     speed: 2
-    m_Value: {x: -509.68372, y: -51.350525, z: -650.29517}
+    m_Value: {x: 190.88165, y: 13.883787, z: 211.28755}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -511,13 +511,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.009377932, y: -0.9908834, z: 0.07618426, w: 0.11355468}
+    m_Target: {x: -0.03724937, y: -0.67466646, z: 0.03528704, w: -0.73679423}
     speed: 2
-    m_Value: {x: 0.009374948, y: -0.9905681, z: 0.07616001, w: 0.11351854}
+    m_Value: {x: -0.037236836, y: -0.67443943, z: 0.035275165, w: -0.7365463}
   m_Size:
-    m_Target: 293.46783
+    m_Target: 122.35582
     speed: 2
-    m_Value: 293.46783
+    m_Value: 122.35582
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -568,7 +568,7 @@ MonoBehaviour:
     height: 371
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: SM_Env_Fence_White_Straight
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -578,24 +578,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 2
+    m_SearchArea: 1
     m_Folders:
-    - Assets/Graphics/3rd Party/PolygonTown/Prefabs/Props
+    - Assets/Prefabs/Enemies/Scavenger
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: SM_Env_Fence_White_Straight
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Graphics/3rd Party/PolygonTown/Prefabs/Props
+  - Assets/Prefabs/Enemies/Scavenger
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Uni\Semester6\GMD\Zoomwatch
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 273}
-    m_SelectedIDs: a4f00000
-    m_LastClickedID: 61604
-    m_ExpandedIDs: 0000000016be000018be00001abe00001cbe00001ebe000020be000022be000024be000026be000028be00002abe00002cbe00002ebe000034be0000c2bf0000c4bf0000eabf000000ca9a3b
+    scrollPos: {x: 0, y: 385}
+    m_SelectedIDs: 9ebe0000
+    m_LastClickedID: 48798
+    m_ExpandedIDs: 0000000070be000072be000074be000076be000078be00007abe00007cbe00007ebe000080be000082be000084be000086be000088be00008ebe0000ccbe0000cebe000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -623,7 +623,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000016be000018be00001abe00001cbe00001ebe000020be000022be000024be000026be000028be00002abe00002cbe00002ebe0000
+    m_ExpandedIDs: 0000000070be000072be000074be000076be000078be00007abe00007cbe00007ebe000080be000082be000084be000086be000088be0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -675,7 +675,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 1092}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
