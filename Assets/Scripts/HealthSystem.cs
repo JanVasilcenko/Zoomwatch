@@ -22,14 +22,20 @@ public class HealthSystem : MonoBehaviour {
 
     public void TakeDamage(int damageTaken) {
         currentHealth -= damageTaken;
+        if (GetComponent<EnemyManager>() != null && GetComponent<EnemyManager>().currentTarget == null) {
+            GetComponent<EnemyManager>().currentTarget = GameObject.FindGameObjectWithTag(Tags.player).transform;
+        }
+
         if (currentHealth <= 0) {
-            audioSource.PlayOneShot(deathSound);
+            if (deathSound != null) {
+                audioSource.PlayOneShot(deathSound);
+            }
             ragdollManager.ActivateRagdoll();
             ragdollManager.DestroyCorpseTimer();
             enabled = false;
         }
     }
-    
+
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag(Tags.bullet)) {
             rigidbody.velocity = rigidbody.velocity;

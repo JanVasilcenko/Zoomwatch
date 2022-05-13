@@ -13,11 +13,9 @@ public class KeyPickUp : MonoBehaviour
             if(diamond)
             {
                 playerInventory.incrementDiamonds();
-                Debug.Log(playerInventory.getDiamonds());
             }
             if(key){
                 playerInventory.setKey();
-                Debug.Log(playerInventory.getKey());
             }
             //set visibility of object
             gameObject.SetActive(false);

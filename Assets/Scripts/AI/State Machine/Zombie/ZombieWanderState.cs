@@ -18,6 +18,10 @@ public class ZombieWanderState : State {
             this.enemyManager = enemyManager;
         }
 
+        if (enemyManager.currentTarget != null) {
+            return chaseState;
+        }
+
         Collider [] colliders = Physics.OverlapSphere(transform.position, enemyManager.detectionRadius);
 
         for (int i = 0; i < colliders.Length; i++) {

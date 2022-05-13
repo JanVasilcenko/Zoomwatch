@@ -886,7 +886,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 39.930927, y: -0.00002527237, z: 0.000037670135}
+  m_ConnectedAnchor: {x: 39.930923, y: -0.00002527237, z: -0.000008583069}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -996,7 +996,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -23.371836, y: -0.7857008, z: 19.09895}
+  m_ConnectedAnchor: {x: -23.371826, y: -0.785656, z: 19.09895}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1693,7 +1693,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -33.94743, y: -0.14489949, z: -0.14357579}
+  m_ConnectedAnchor: {x: -33.947433, y: -0.14489532, z: -0.14362538}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1864,7 +1864,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -28.183737, y: 3.600521, z: 0}
+  m_ConnectedAnchor: {x: -28.18373, y: 3.6005669, z: 0}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2086,7 +2086,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -40.41542, y: 6.1365767, z: 1.9335363e-13}
+  m_ConnectedAnchor: {x: -40.415417, y: 6.1366243, z: 1.9335363e-13}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3041,7 +3041,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -23.371548, y: -0.7857456, z: -19.09895}
+  m_ConnectedAnchor: {x: -23.371544, y: -0.7856989, z: -19.09895}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -3181,7 +3181,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.115779, y: -2.692036, z: -9.89666}
+  m_ConnectedAnchor: {x: 4.115772, y: -2.6920831, z: -9.89666}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -3321,7 +3321,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 33.947445, y: 0.1447475, z: 0.14358497}
+  m_ConnectedAnchor: {x: 33.947445, y: 0.1447488, z: 0.14363599}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -3791,7 +3791,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -39.93092, y: 0.000030994415, z: -0.0000333786}
+  m_ConnectedAnchor: {x: -39.93092, y: 0.000030994415, z: 0.000012874603}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -4398,6 +4398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  audioSource: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &5132329053178866342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4411,8 +4413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 801432}
-  detectionRadius: 6
-  viewableAngle: 180
+  detectionRadius: 30
+  viewableAngle: 245
   turningSpeed: 200
   navMeshAgent: {fileID: 0}
   currentTarget: {fileID: 0}
@@ -4944,7 +4946,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.1157866, y: -2.692037, z: 9.896755}
+  m_ConnectedAnchor: {x: 4.1157794, y: -2.6920843, z: 9.896708}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -5083,7 +5085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scavengerWanderState: {fileID: 801432}
   scavengerChaseState: {fileID: 1464354389}
-  fireRange: 6
+  fireRange: 10
 --- !u!1 &6191343370521126893
 GameObject:
   m_ObjectHideFlags: 0

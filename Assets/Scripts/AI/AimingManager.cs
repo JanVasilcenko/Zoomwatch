@@ -86,6 +86,7 @@ public class AimingManager : MonoBehaviour {
 
     public void Fire() {
         GameObject currentBullet = Instantiate(bullet, aimTransform.position, Quaternion.identity);
+        currentBullet.GetComponent<Bullet>().IsEnemyBullet();
         currentBullet.GetComponent<Rigidbody>().AddForce(aimTransform.forward * shootForce, ForceMode.Impulse);
     }
 }
