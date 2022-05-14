@@ -8,8 +8,7 @@ public class SFXManager : MonoBehaviour
 {
 
     public AudioSource musicAudioSource;
-
- 
+    
     public static SFXManager instance;
 
     private void Awake()
@@ -18,9 +17,13 @@ public class SFXManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        else
+        {
+            
         instance = this;
         DontDestroyOnLoad(this);
+        }
+
     }
 
     
