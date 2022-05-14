@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -35,12 +32,7 @@ public class PlayerMovement : MonoBehaviour {
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
-
-    [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space;
-    public KeyCode sprintKey = KeyCode.LeftShift;
-    public KeyCode crouchKey = KeyCode.LeftControl;
-
+    
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
@@ -59,8 +51,6 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 moveDirection;
 
     private Rigidbody rb;
-    public PlayerCamera camera;
-
     public MovementState movementState;
 
     public enum MovementState {
@@ -92,7 +82,6 @@ public class PlayerMovement : MonoBehaviour {
         StateHandler();
         
         //sound step
-
         if (grounded && rb.velocity.magnitude > 2f && !audioSource.isPlaying && !PauseMenu.isPaused)
         {
             audioSource.volume = Random.Range(0.07f, 0.15f);
@@ -155,37 +144,28 @@ public class PlayerMovement : MonoBehaviour {
         else if (Input.GetButton("Crouch") && grounded) {
             movementState = MovementState.crouching;
             moveSpeed = crouchSpeed;
-            //reset camera effects
-            //camera.DoFov(60f);
-        }
+         }
 
         //Mode - Sprinting
         else if (grounded && Input.GetButton("Sprint")) {
             movementState = MovementState.sprinting;
-            //moveSpeed = sprintSpeed;
             moveSpeed += acceleration * Time.deltaTime;
             
             if (moveSpeed > sprintSpeed) {
                 moveSpeed = sprintSpeed;
             }
-            //camera effect for SPEEEEEDDD
-            //camera.DoFov(80f);
-        }
+         }
 
         //Mode - Walking
         else if (grounded) {
             movementState = MovementState.walking;
             moveSpeed = walkSpeed;
-            //reset camera effects
-            //camera.DoFov(60f);
-        }
+         }
 
         //Mode - air
         else {
             movementState = MovementState.air;
-            //reset camera effects
-            //camera.DoFov(60f);
-        }
+         }
     }
 
     private void MovePlayer() {
@@ -208,9 +188,6 @@ public class PlayerMovement : MonoBehaviour {
         //in air
         else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
-
-        //turn gravity off while on slope
-        //rb.useGravity = !OnSlope();
     }
 
     private void SpeedControl() {

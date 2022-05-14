@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
 
 public class AnimationStateController : MonoBehaviour
 {
     private Animator animator;
     public PlayerMovement pm;
-   //public TwoBoneIKConstraint twoBoneIKConstraint;
     
     void Start()
     {
         animator = GetComponent<Animator>();
-        //twoBoneIKConstraint.data.target = 
     }
 
     void Update()
@@ -40,18 +35,6 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool("isIdle", true);
             animator.SetBool("isSprinting", false);
         }
-        
-        // if (Input.GetButton("Jump"))
-        // {
-        //     animator.SetBool("isIdle", true);
-        //     animator.SetBool("isSprinting", false);
-        // }
-        //
-        // if (Input.GetButton("Grapple"))
-        // {
-        //     animator.SetBool("isIdle", true);
-        //     animator.SetBool("isSprinting", false);
-        // }
     }
 
     public void SwitchWeapon()

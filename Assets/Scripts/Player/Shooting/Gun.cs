@@ -9,9 +9,7 @@ public class Gun : MonoBehaviour {
     public GameObject bullet2;
     public GameObject bullet3;
     public GameObject bullet4;
-
-
-
+    
     //ammo
     public int bulletAmmo1, bulletAmmo2, bulletAmmo3, bulletAmmo4;
 
@@ -110,10 +108,7 @@ public class Gun : MonoBehaviour {
             shooting = Input.GetButton("Shoot") || (Input.GetAxis("Shoot") != 0);
         else
             shooting = Input.GetButtonDown("Shoot") || (Input.GetAxis("Shoot") != 0);
-
-        //Reloading 
-        //if (Input.GetButtonDown("Reload") && bulletsLeft < magazineSize && !reloading) Reload();
-        //Reload automatically when trying to shoot without ammo
+        
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0 && bullet == bullet1)
             Reload();
 
@@ -333,7 +328,4 @@ public class Gun : MonoBehaviour {
         }
 
     }
-
-
-
 }

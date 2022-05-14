@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomBullet : MonoBehaviour {
@@ -22,8 +20,6 @@ public class CustomBullet : MonoBehaviour {
     public int maxCollisions;
     public float maxLifetime;
     public bool explodeOnTouch = true;
-
-    //public AudioClip explosionSound;
 
     int collisions;
     PhysicMaterial physics_mat;
@@ -52,12 +48,10 @@ public class CustomBullet : MonoBehaviour {
         Collider [] enemies = Physics.OverlapSphere(transform.position, explosionRange, whatIsEnemies);
         for (int i = 0; i < enemies.Length; i++) {
             //Get component of enemy and call Take Damage
-
-            //Just an example!
+            
             if (enemies [i].GetComponent<HealthSystem>() != null) {
                 enemies [i].GetComponent<HealthSystem>().TakeDamage(explosionDamage);
             }
-            ///enemies[i].GetComponent<ShootingAi>().TakeDamage(explosionDamage);
 
             //Add explosion force (if enemy has a rigidbody)
             if (enemies [i].GetComponent<Rigidbody>())
@@ -66,24 +60,11 @@ public class CustomBullet : MonoBehaviour {
 
         //Add a little delay, just to make sure everything works fine
         Invoke("Delay", 0.01f);
-
-        //Invoke("DelayExplosion", 5f);
     }
     private void Delay() {
-        // FindObjectOfType<SFXManager>().PlaySFX("");
         explosionDamage = 0;
-       // AudioSource.PlayClipAtPoint(explosionSound, gameObject.transform.position);
         Destroy(gameObject);
-
-
-
-        //Invoke("DelayExplosion", 5f);
     }
-
-    // private void DelayExplosion()
-    // {
-    //     Destroy(explosion);
-    // }
 
     private void OnCollisionEnter(Collision collision) {
         //Don't count collisions with other bullets
@@ -110,11 +91,4 @@ public class CustomBullet : MonoBehaviour {
         //Set gravity
         rb.useGravity = useGravity;
     }
-
-    /// Just to visualize the explosion range
-    // private void OnDrawGizmosSelected()
-    // {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawWireSphere(transform.position, explosionRange);
-    // }
 }
