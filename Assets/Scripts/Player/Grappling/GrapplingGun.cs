@@ -47,12 +47,6 @@ public class GrapplingGun : MonoBehaviour
             joint.maxDistance = distanceFromPoint * 0.8f;
             joint.minDistance = distanceFromPoint * 0.25f;
 
-            //Adjust these values to fit your game.
-            // joint.spring = 4.5f;
-            // joint.damper = 7f;
-            // joint.massScale = 4.5f;
-            
-            
             if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapplePull))
             {
                 joint.spring = 100f;
@@ -66,11 +60,6 @@ public class GrapplingGun : MonoBehaviour
                 joint.spring = this.spring;
                 joint.damper = this.damper;
                 joint.massScale = this.massScale;
-                
-                // joint.spring = 7f;
-                // joint.damper = 2f;
-                // joint.massScale = 4f; 
-                
             }
 
             if (!PauseMenu.isPaused)
@@ -80,11 +69,8 @@ public class GrapplingGun : MonoBehaviour
             
         }
     }
-
-
-    /// <summary>
-    /// Call whenever we want to stop a grapple
-    /// </summary>
+    
+    // Call whenever we want to stop a grapple
     void StopGrapple() {
         Destroy(joint);
     }

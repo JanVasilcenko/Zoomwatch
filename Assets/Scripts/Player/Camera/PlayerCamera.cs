@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -18,17 +16,17 @@ public class PlayerCamera : MonoBehaviour {
     void Update() {
         if (!PauseMenu.isPaused)
         {
-              //get mouse input
-                    float mouseX = Input.GetAxis("Mouse X") * Time.fixedDeltaTime * sensitivityX;
-                    float mouseY = Input.GetAxis("Mouse Y") * Time.fixedDeltaTime * sensitivityY;
-            
-                    rotationY += mouseX;
-                    rotationX -= mouseY;
-                    rotationX = Mathf.Clamp(rotationX, -90f, 90f);
-            
-                    //rotate cam and orientation
-                    cameraHolder.rotation = Quaternion.Euler(rotationX, rotationY, 0);
-                    orientation.rotation = Quaternion.Euler(0, rotationY, 0);
+            //get mouse input
+            float mouseX = Input.GetAxis("Mouse X") * Time.fixedDeltaTime * sensitivityX;
+            float mouseY = Input.GetAxis("Mouse Y") * Time.fixedDeltaTime * sensitivityY;
+    
+            rotationY += mouseX;
+            rotationX -= mouseY;
+            rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+    
+            //rotate cam and orientation
+            cameraHolder.rotation = Quaternion.Euler(rotationX, rotationY, 0);
+            orientation.rotation = Quaternion.Euler(0, rotationY, 0);
         }
       
     }
