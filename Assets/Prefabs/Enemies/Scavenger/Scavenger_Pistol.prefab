@@ -5085,7 +5085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scavengerWanderState: {fileID: 801432}
   scavengerChaseState: {fileID: 1464354389}
-  fireRange: 10
+  fireRange: 30
 --- !u!1 &6191343370521126893
 GameObject:
   m_ObjectHideFlags: 0

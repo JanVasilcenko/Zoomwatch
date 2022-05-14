@@ -16,7 +16,7 @@ public class ScavengerChaseState : State {
             return scavengerWanderState;
         }
 
-        enemyManager.navMeshAgent.stoppingDistance = 25f;
+        enemyManager.navMeshAgent.stoppingDistance = 100f;
         enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
         enemyAnimationController.SetChasingAnimation();
 
