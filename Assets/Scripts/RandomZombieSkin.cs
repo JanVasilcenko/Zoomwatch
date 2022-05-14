@@ -17,6 +17,6 @@ public class RandomZombieSkin : MonoBehaviour {
 
     private void ActivateRandomSkin() {
         DeactivateAll();
-        allSkins [CommonUtils.RandomBetweenTwoIntegers(0, allSkins.Length)].SetActive(true);
+        allSkins [CommonUtils.RandomBetweenTwoIntegers(0, allSkins.Length-1)].SetActive(true);
     }
 }
