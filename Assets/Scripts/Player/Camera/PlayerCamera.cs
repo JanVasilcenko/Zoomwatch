@@ -1,11 +1,13 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityTemplateProjects.UI;
 
 public class PlayerCamera : MonoBehaviour {
     public float sensitivityX, sensitivityY;
     public Transform orientation;
     public Transform cameraHolder;
 
+    public MouseSettings mouseSettings;
     private float rotationX, rotationY;
 
     void Start() {
@@ -17,8 +19,9 @@ public class PlayerCamera : MonoBehaviour {
         if (!PauseMenu.isPaused)
         {
             //get mouse input
-            float mouseX = Input.GetAxis("Mouse X") * Time.fixedDeltaTime * sensitivityX;
-            float mouseY = Input.GetAxis("Mouse Y") * Time.fixedDeltaTime * sensitivityY;
+            float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSettings.sensitivityX;
+            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSettings.sensitivityY;
+            
     
             rotationY += mouseX;
             rotationX -= mouseY;
@@ -40,4 +43,9 @@ public class PlayerCamera : MonoBehaviour {
     {
         transform.DOLocalRotate(new Vector3(0, 0, zTilt), 0.25f);
     }
+
+   
+
+    
+    
 }
