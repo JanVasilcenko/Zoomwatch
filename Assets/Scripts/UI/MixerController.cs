@@ -20,13 +20,16 @@ public class MixerController : MonoBehaviour {
     public Slider musicSlider;
     public Slider sensitivityXSlider;
     public Slider sensitivityYSlider;
+    public bool isGameMenu;
 
     private void Start() {
         masterSlider.value = GetKeyIfExistsMusic("MasterVolume");
         sfxSlider.value = GetKeyIfExistsMusic("SFXVolume");
         musicSlider.value = GetKeyIfExistsMusic("MusicVolume");
-        sensitivityXSlider.value = GetKeyIfExistsSensitivity("SensitivityX") / 100;
-        sensitivityYSlider.value = GetKeyIfExistsSensitivity("SensitivityY") / 100;
+        if (!isGameMenu) {
+            sensitivityXSlider.value = GetKeyIfExistsSensitivity("SensitivityX") / 100;
+            sensitivityYSlider.value = GetKeyIfExistsSensitivity("SensitivityY") / 100;
+        }
     }
 
     private float GetKeyIfExistsMusic(string key) {
