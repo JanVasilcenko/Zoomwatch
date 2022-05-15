@@ -1,6 +1,12 @@
 # Zoomwatch
 Just an ordinary normal game
 
+## Table of Contents
+- [Youtube video demonstration](#youtube=video-demonstration)
+- [WebGL build](#webgl-build)
+- [Curriculum Covered](#curriculum-covered)
+- [Third party assets](#third-party-assets)
+
 ## Youtube video demonstration
 
 ## WebGL build
