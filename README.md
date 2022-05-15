@@ -6,6 +6,18 @@ Just an ordinary normal game
 ## WebGL build
 https://janvasilcenko.github.io/Zoomwatch_WebGL/?fbclid=IwAR1QjY7NJesXj82eWSK7sTmyLStEZ_1Itxq9DkLYVw08HpCqvWYicQF6uh8
 
+## Curriculum covered
+
+| Curriculum | Covered |
+| --- | --- |
+| Input & Vectors | :heavy_check_mark: |
+| Physics | :heavy_check_mark: |
+| Graphics & Audio | :heavy_check_mark: |
+| Animation | :heavy_check_mark: |
+| User Interface | :heavy_check_mark: |
+| Intermediate Scripting | :heavy_check_mark: |
+| Game Architecture | 50-50 |
+
 ## Third party assets
 POLYGON Prototype - Low Poly 3D Art by Synty https://assetstore.unity.com/packages/3d/props/exterior/polygon-prototype-low-poly-3d-art-by-synty-137126#description<br />
 POLYGON Particle FX - Low Poly 3D Art by Synty https://assetstore.unity.com/packages/vfx/particles/polygon-particle-fx-low-poly-3d-art-by-synty-168372<br />
