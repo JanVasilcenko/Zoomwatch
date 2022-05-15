@@ -38,6 +38,6 @@ https://janvasilcenko.github.io/Zoomwatch_WebGL/?fbclid=IwAR1QjY7NJesXj82eWSK7sT
 10. Procedural destruction (DitzelGames) - https://www.youtube.com/watch?v=VwGiwDLQ40A&list=LL&index=9
 11. Mixer slider reference - https://www.youtube.com/watch?v=C1gCOoDU29M&t=241s
 12. Pause menu reference - https://www.youtube.com/watch?v=9dYDBomQpBQ
-13. At Doom's Gate by Bobby Prince - Doom 1993
-14. Terror-Billy by Mick Gordon - Wolfenstein II: The New Colossus
-15. Power - Epic Motivational Background Music / Powerful Dubstep Rock Trailer - https://soundcloud.com/ashamaluevmusic/power?in=ashamaluevmusic/sets/music-for-gaming-videos
+13. Power - Epic Motivational Background Music / Powerful Dubstep Rock Trailer - https://soundcloud.com/ashamaluevmusic/power?in=ashamaluevmusic/sets/music-for-gaming-videos
+14. At Doom's Gate by Bobby Prince - Doom 1993
+15. Terror-Billy by Mick Gordon - Wolfenstein II: The New Colossus
