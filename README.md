@@ -8,6 +8,7 @@ Just an ordinary normal game
 - [Third party assets](#third-party-assets)
 
 ## Youtube video demonstration
+[![image](https://img.youtube.com/vi/pirlccvS1ds/0.jpg)](https://youtu.be/pirlccvS1ds)
 
 ## WebGL build
 https://janvasilcenko.github.io/Zoomwatch_WebGL/?fbclid=IwAR1QjY7NJesXj82eWSK7sTmyLStEZ_1Itxq9DkLYVw08HpCqvWYicQF6uh8
