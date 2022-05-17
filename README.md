@@ -50,14 +50,32 @@ https://janvasilcenko.github.io/Zoomwatch_WebGL/?fbclid=IwAR1QjY7NJesXj82eWSK7sT
 | Button | Control |
 | --- | --- |
 | WASD | Movement |
+| Mouse | Camera |
 | Left mouse click | Shoot |
 | Right mouse click | Grappling gun |
 | Spacebar | Jump |
-| Left shift | Sprint |
-| Left ctrl | Slide |
+| Left shift + WASD | Sprint |
+| Left ctrl + WASD | Slide |
+| Left ctrl + WASD + in the air | Air dash |
 | c | Crouch |
 | 1 | Switch to ammo 1 |
 | 2 | Switch to ammo 2 |
 | 3 | Switch to ammo 3 |
 | 4 | Switch to ammo 4 |
 | Esc | Pause menu |
+
+### Xbox Controller
+
+| Button | Control |
+| --- | --- |
+| Left stick | Movement |
+| Right stick | Camera |
+| RT | Shoot |
+| RB | Grappling gun |
+| A | Jump |
+| LB + moving | Sprint |
+| B + moving | Slide |
+| B + moving + in the air | Air dash |
+| Y | Crouch |
+
+Cannot switch ammo using the controller unfortunately as the D-pad is recognized as an axis used for movement in Unity's input manager, which means it only takes horizontal and vertical inputs. This needs more research and could be done in the future if we want to move forward with it.
