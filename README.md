@@ -6,6 +6,7 @@ Just an ordinary normal game
 - [WebGL build](#webgl-build)
 - [Curriculum Covered](#curriculum-covered)
 - [Third party assets](#third-party-assets)
+- [Controls](#controls)
 
 ## Youtube video demonstration
 [![image](https://img.youtube.com/vi/pirlccvS1ds/0.jpg)](https://youtu.be/pirlccvS1ds)
@@ -41,3 +42,22 @@ https://janvasilcenko.github.io/Zoomwatch_WebGL/?fbclid=IwAR1QjY7NJesXj82eWSK7sT
 13. Power - Epic Motivational Background Music / Powerful Dubstep Rock Trailer - https://soundcloud.com/ashamaluevmusic/power?in=ashamaluevmusic/sets/music-for-gaming-videos
 14. At Doom's Gate by Bobby Prince - Doom 1993
 15. Terror-Billy by Mick Gordon - Wolfenstein II: The New Colossus
+
+## Controls
+
+### Keyboard and mouse
+
+| Button | Control |
+| --- | --- |
+| WASD | Movement |
+| Left mouse click | Shoot |
+| Right mouse click | Grappling gun |
+| Spacebar | Jump |
+| Left shift | Sprint |
+| Left ctrl | Slide |
+| c | Crouch |
+| 1 | Switch to ammo 1 |
+| 2 | Switch to ammo 2 |
+| 3 | Switch to ammo 3 |
+| 4 | Switch to ammo 4 |
+| Esc | Pause menu |
